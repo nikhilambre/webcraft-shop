@@ -1,0 +1,1 @@
+<link href="{{ asset('public/css/blog-22.css') }}" rel="stylesheet">

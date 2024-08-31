@@ -1,0 +1,1 @@
+<link href="{{ asset('public/css/product-1.css') }}" rel="stylesheet">

@@ -1,0 +1,188 @@
+@import "theme-light";
+@import "mixins";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Rubik', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #2c949f;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 36px;
+@text-size: 14px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-2;
+@header-col-dark-1: @bw-8;
+@header-col-dark-2: @bw-12;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-2;
+@text-col-dark-1: @bw-8;
+@text-col-dark-2: @bw-15;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-2;
+@lead-text-col-dark-1: @bw-8;
+@lead-text-col-dark-2: @bw-15;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+.title-line.span-after-1{
+    clear: both;
+    position: relative;
+    line-height: 0;
+
+    .short-line{
+        background-color: #ff4f10;
+        border-radius: 10px;
+        display: inline-block;
+        height: 3px;
+        margin-right: 5px;
+        position: relative;
+        width: 20px;
+    }
+    .long-line{
+        background-color: #333;
+        border-radius: 10px;
+        display: inline-block;
+        height: 3px;
+        position: relative;
+        width: 90px;
+    }
+}
+
+.separator.span-after-2{
+    display: inline-block;
+    background-color: #fab702;
+    width: 6px;
+    height: 6px;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    &:before{
+        position: absolute;
+        right: -70px;
+        top: 2px;
+        width: 60px;
+        height: 2px;
+        background-color: #fab702;
+        content: '';
+    }
+    &:after{
+        position: absolute;
+        left: -70px;
+        top: 2px;
+        width: 60px;
+        height: 2px;
+        background-color: #fab702;
+        content: '';
+    }
+}
+
+.line.span-after-3{
+    position: relative;
+    display: inline-block;
+    padding-top: 25px;
+    width: 100%;
+
+    &:before{
+        background-color: rgba(0, 0, 0, 0.15);
+        width: 105px;
+        height: 1px;
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+    }
+    &:after{
+        background-color: #0c5adb;
+        width: 40px;
+        height: 3px;
+        bottom: -1px;
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.border-divider.span-after-4{
+    height: 4px;
+    width: 30px;
+    display: inline-block;
+    background-color: @c-1;
+    border-radius: 2px;
+    position: relative;
+    margin-left: 27px;
+
+    &:before{
+        content: "";
+        position: absolute;
+        left: -27px;
+        top: 0;
+        display: inline-block;
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+
+        background-color: @c-1;
+        -webkit-box-shadow: 9px 0px 0px 0px @c-1, 18px 0px 0px 0px @c-1;
+        box-shadow: 9px 0px 0px 0px @c-1, 18px 0px 0px 0px @c-1;
+
+        // background-color: #FFFFFF;
+        // -webkit-box-shadow: 9px 0px 0px 0px #FFFFFF, 18px 0px 0px 0px #FFFFFF;
+        // box-shadow: 9px 0px 0px 0px #FFFFFF, 18px 0px 0px 0px #FFFFFF;
+    }
+}

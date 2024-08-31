@@ -1,0 +1,22 @@
+.sec-s25 {
+  padding: 20px 0;
+}
+.sec-s25 .s25-b1 h3.head-text {
+  font-family: 'Lato', serif;
+  color: #181818;
+  font-size: 30px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d0d0d0;
+}
+.sec-s25 .s25-b2 .b2-ul .b2-li {
+  margin: 5px 0;
+}
+.sec-s25 .s25-b2 .b2-ul .b2-li .b2-a {
+  font-family: 'Open Sans', sans-serif;
+  color: #484848;
+  font-size: 14px;
+  padding: 5px 10px;
+  display: inline-block;
+  background-color: #e8e8e8;
+}

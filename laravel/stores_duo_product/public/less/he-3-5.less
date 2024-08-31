@@ -1,0 +1,196 @@
+@import "mixins";
+@import "theme-light";
+@import (less) "../css/animated-header.css";
+@import "var-product-1";
+
+
+.c3-header .navbar{
+    .bg(@t);
+    .tra(@tra-1);
+    border: none;
+
+    .navbar-header{
+        .navbar-toggle{}
+        .navbar-brand{
+            height: auto;
+            padding: 0;
+
+            img{
+                height: 90px;
+            }
+
+            .brand-img-w{
+                display: block;
+            }
+            .brand-img-b{
+                display: none;
+            }
+        }
+    }
+
+    .collapse{
+        .nav{
+            .pri-li, .pri-li-social{
+                &>a{
+                    display: block;
+                    color: @header-link-text-color;
+                    font-family: @header-link-ff;
+                    font-size: @header-link-text-size;
+                    padding: 0 15px;
+                    line-height: 90px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    .tra(@tra-2);
+
+                    &:hover{
+                        color: @header-link-text-color-hover;
+                    }
+                    &>i{
+                        width: 34px;
+                        height: 34px;
+                        margin: -10px -10px 0 -10px;
+                        padding-top: 10px;
+                        color: #fff;
+                        .bg(@c-1);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .collapse.header-page{
+        .nav{
+            li{
+                a{
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c3-header.header-white .navbar{
+    .bg(@header-background-color);
+    .navbar-brand{
+        .brand-img-w{
+            display: none;
+        }
+        .brand-img-b{
+            display: block;
+            height: 80px;
+        }
+    }
+    .collapse .nav li, {
+        &>a, .dropdown-toggle{
+            line-height: 80px;
+            color: @header-link-text-color-2;    
+            &:hover{
+                color: @header-link-text-color-hover-2;
+            }
+        }
+    }
+}
+
+.c3-home{
+    position: relative;
+    background-attachment:fixed ;
+    width:100%;
+    height:650px;
+    background-size: cover;
+
+    .large-header{
+        .bg(@b-3);
+        height: 650px;
+
+        .home-h2{
+            color: @header-block-color-2;
+            font-size: @header-block-text-size-2;
+            font-family: @header-block-ff-2;
+            font-weight: bold;
+            letter-spacing: 0px;
+            padding-bottom: 40px;
+            width: 80%;
+            top: 45%;
+
+            .thin{
+                font-weight: lighter;
+            }
+        }
+
+        .home-p{
+            color: @header-block-color-3;
+            font-family: @header-block-ff-3;
+            font-size: @header-block-text-size-3;
+            top: 60%;
+        }
+
+        .home-link{
+            top: 70%;
+            a{
+                color: @header-block-link;
+                font-size: @header-block-link-text;
+                .bg(@header-block-link-bg);
+                padding: 14px 18px;
+                border: 2px solid @header-block-link;
+                border-radius: 20px;
+
+                &:hover{
+                    .bg(@w-1);
+                    color: @bw-27;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .c3-header .navbar{
+        position: absolute;
+        .navbar-toggle{
+            margin-top: 22px;
+            margin-right: 20px;
+        }
+        .navbar-collapse{
+            .bg(@bw-30);
+            max-height: none;
+            ul li a{
+                line-height:50px !important;
+                color: @bw-10 !important;
+            }
+        }
+        .cbp-hrmenu{
+            .cbp-added{
+                .cbpc-link{
+                    line-height: 26px!important;
+                }
+            }
+        }
+    }
+    .c3-home{
+        .home-h2{
+            font-size: @header-block-text-size-2-mobile !important;
+            top: 40%;
+            width: 100% !important;
+        }
+        .home-p{
+            width: 100% !important;
+            top: 65% !important;
+        }
+        .home-link{
+            width: 100% !important;
+            top: 80% !important;
+        }
+    }
+}

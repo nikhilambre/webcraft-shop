@@ -1,0 +1,200 @@
+@import "theme-light";
+@import "mixins";
+
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Open Sans Condensed', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #92CAE6;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 30px;
+@text-size: 14px;
+@text-size-mobile: 16px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 32px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+@text-size-10: 40px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-4;
+@header-col-dark-1: @bw-10;
+@header-col-dark-2: @bw-17;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-4;
+@text-col-dark-1: @bw-10;
+@text-col-dark-2: @bw-17;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-4;
+@lead-text-col-dark-1: @bw-10;
+@lead-text-col-dark-2: @bw-17;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+//  Footer related variables
+@footer-bg-1: @bw-1;
+@footer-bg-2: @bw-8;
+@footer-bg-3: @bw-30;
+
+.fot-s1{
+    padding: 60px 0;
+    .bg(@footer-bg-1);
+
+    .foot-top{
+        padding-bottom: 60px;
+        border-bottom: 1px solid @bw-16;
+    }
+
+    .s1-b1{
+        .b1-h3{
+            font-family: @header-ff;
+            color: @header-col-light-1;
+            font-size: @header-size;
+
+            margin-bottom: 30px;
+        }
+        .b1-p{
+            font-family: @text-ff;
+            color: @text-col-light-2;
+            font-size: @text-size;
+
+            margin-bottom: 20px;
+        }
+        .b1-ul{
+            .b1-li{
+                .b1-a{
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    .bg(@bw-10);
+                    border-radius: 50%;
+                    padding-top: 9px;
+
+                    i{
+                        font-size: 16px;
+                        color: @bw-16;
+                    }
+                }
+            }
+        }
+    }
+    .s1-b2{
+        .b2-c1{
+            .c1-h3{
+                font-family: @header-ff;
+                color: @lead-text-col-dark-2;
+                font-size: @lead-text-size;
+
+                margin-bottom: 30px;
+            }
+            .c1-ul{
+                .c1-li{
+                    a{
+                        font-family: @text-ff;
+                        color: @text-col-dark-2;
+                        font-size: @text-size;
+
+                        display: block;
+                        margin-bottom: 10px;
+                        .tra(@tra-1);
+
+                        &:hover{
+                            color: @bw-14;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .foot-line{
+        padding: 10px 0;
+
+        .fl-p{
+            font-family: @text-ff;
+            color: @text-col-light-2;
+            font-size: @text-size;
+            .fl-a{
+                color: @bw-10;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .p-text{
+        font-size: 16px !important;
+    }
+    .fot-s1{
+        p{
+            font-size: 16px !important;
+        }
+        .b2-c1{
+            margin-bottom: 60px !important;
+            .c1-h3{
+                margin-bottom: 15px !important;
+            }
+        }
+    }
+}

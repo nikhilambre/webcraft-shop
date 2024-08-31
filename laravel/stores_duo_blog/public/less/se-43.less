@@ -1,0 +1,51 @@
+@import "theme-light";
+@import "mixins";
+@import "var-blog-22";
+
+
+.b43-wrap{
+    padding: 100px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/bg8.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+    .site-head{
+        .head-text{
+            font-family: @header-ff;
+            color: @header-col-light;
+            font-size: @header-size;
+
+            text-transform: uppercase;
+            
+            small{
+                color: @header-col-light-1;
+            }
+        }
+        .head-line{
+            height: 4px;
+            width: 80px;
+            display: inline-block;
+            .bg(@c-1);
+        }
+    }
+    .social-link{
+        padding: 100px 0 40px 0;
+
+        .ul-list-1{
+            li{
+                width: 16%;
+                display: inline-block;
+                a{
+                    text-transform: uppercase;
+                    color: @gb-27;
+                    .svg-inline--fa{
+                        font-size: 70px;
+                        margin-bottom: 20px;
+                        color: @gb-27;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@import "theme-light";
+@import "mixins";
+@import "var-blog-22";
+
+
+//  Home Header Designs
+//******************************************/
+
+.c1-header .navbar{
+    .bg(@t);
+    .tra(@tra-1);
+
+    .navbar-header{
+        .navbar-toggle{}
+        .navbar-brand{
+            height: auto;
+            padding: 0;
+
+            img{
+                width: 100px;
+                margin: -7px 0 -10px 0;
+                height: auto;
+            }
+
+            .brand-img-w{
+                display: block;
+            }
+            .brand-img-b{
+                display: none;
+            }
+        }
+    }
+
+    .collapse{
+        .nav{
+            li{
+                a{
+                    display: block;
+                    color: #fff;
+                    padding: 30px 15px 25px 15px;
+                    text-transform: uppercase;
+
+                    i{
+                        width: 34px;
+                        height: 34px;
+                        margin: -10px -10px 0 -10px;
+                        padding-top: 10px;
+                        color: #fff;
+                        .bg(@c-1);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c1-header.header-white .navbar{
+    .bg(#fff);
+    .navbar-brand{
+        .brand-img-w{
+            display: none;
+        }
+        .brand-img-b{
+            display: block;
+            width: 90px;
+        }
+    }
+    .collapse li a {
+        color: #333;
+        padding: 25px 15px 20px 15px;
+    }
+}
+
+.c1-home{
+    position: relative;
+    background-image:url('../../images/bg1.jpg');
+    background-attachment:fixed ;
+    width:100%;
+    height:650px;
+    background-size: cover;
+
+    .c1-cover{
+        .bg(@b-2);
+    }
+
+    .home-box{
+        padding-top: 22%;
+        height: 650px;
+
+        .home-span{
+            color: #fff;
+            font-size: 1.3em;
+            border-bottom: 2px solid #fff;
+        }
+
+        .home-h2{
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 4.3em;
+
+            margin: 20px 0;
+        }
+
+        .home-p{
+            color: #fff;
+            width: 70%;
+            margin-left: 15%;
+        }
+
+        .home-link{
+            margin-top: 40px;
+            a{
+                color: #fff;
+                padding: 7px 18px;
+                border: 2px solid #fff;
+                border-radius: 20px;
+
+                &:hover{
+                    .bg(#fff);
+                    color: @c-2;
+                }
+            }
+        }
+    }
+}

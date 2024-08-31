@@ -1,0 +1,19 @@
+
+layout::
+    - it renders head and footer and scripts
+
+header-home::
+    - home page header - may be with carausal
+
+header-page:;
+    - header for remaining page or may be blank if looking to build different look header for all
+    - atleast top navigation can be added here
+
+
+
+
+template loading css files are in template folder
+
+for now my blog stylesheet renders css from template file
+i want all template related file creation should be in template folder
+at end change blog css file

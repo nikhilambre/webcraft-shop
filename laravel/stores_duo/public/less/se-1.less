@@ -1,0 +1,184 @@
+@import "theme-light";
+@import "mixins";
+
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Montserrat', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #4BB7CC;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #3f4d5d;
+@c-7:   #626262;
+@c-8:   #c0c5cc;
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #43575d;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 36px;
+@text-size: 14px;
+@text-size-mobile: 16px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+@text-size-10: 40px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-2;
+@header-col-dark-1: @bw-8;
+@header-col-dark-2: @bw-12;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-2;
+@text-col-dark-1: @bw-8;
+@text-col-dark-2: @bw-15;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-2;
+@lead-text-col-dark-1: @bw-8;
+@lead-text-col-dark-2: @bw-15;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-1;
+
+
+.b1-wrap{
+    .bg(@bw-28);
+    padding: 80px 0 40px 0;
+
+    .head-text{
+        position: relative;
+        font-family: @header-ff;
+        color: @header-col-dark;
+        font-size: @header-size;
+
+        span{
+            font-weight: 100;
+        }
+        &:after {
+            left: 50%;
+            z-index: 1;
+            width: 60px;
+            height: 2px;
+            content: " ";
+            bottom: -15px;
+            margin-left: -30px;
+            text-align: center;
+            position: absolute;
+            .bg(@c-1);
+        }
+    }
+    .p-text{
+        font-family: @text-ff;
+        color: @text-col-dark-1;
+        font-size: @text-size;
+
+        line-height: 1.6em;
+        width: 60%;
+        padding: 20px 0;
+        margin-left: 20%;
+    }
+    .b1-content{
+        padding: 40px 0;
+        .b1-img-1{
+            max-height: 500px;
+            margin-top: -40px;
+            overflow: hidden;
+            
+            img{
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+        .lead-text{
+            color: @lead-text-col-dark-1;
+            font-family: @text-ff;
+            font-size: @lead-text-size;
+            line-height: 1.6em;
+        }
+        ul{
+            margin-left: 20px;
+
+            li{
+                padding: 7px 0;
+                color: @text-col-dark;
+                font-size: @text-size;
+                .fa{
+                    display: inline-block;
+                    width: 34px;
+                    color: @c-1;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .p-text{
+        font-size: 16px !important;
+    }
+    .b1-wrap{
+        .b1-content{
+            .b1-img-1{
+                img{
+                    padding: 20px 0;
+                    width: 80% !important;
+                }
+            }
+            ul li{
+                font-size: @text-size-mobile !important;
+            }
+        }
+    }
+}

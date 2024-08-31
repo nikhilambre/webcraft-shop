@@ -1,0 +1,301 @@
+@import "theme-light";
+@import "mixins";
+@import (less) "../css/boxesFx.css";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Rammetto One', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+@c-1:   #f6a821;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+@c-5:   #01A2A6;
+@c-6:   #082f4e;
+@c-7:   #011222;
+
+@c-8:   #8898aa;
+@c-9:   #6b7c93;
+@c-10:  #43575d;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-link-text-size: 14px;
+
+@header-block-text-size-1: 16px;
+@header-block-text-size-1-mobile: 14px;
+
+@header-block-text-size-2: 100px;
+@header-block-text-size-2-mobile: 70px;
+
+@header-block-text-size-3: 16px;
+@header-block-text-size-3-mobile: 14px;
+
+@header-block-link-text: 14px;
+
+@header-size: 36px;
+@text-size: 14px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+
+
+//  Location specific colors    ////////////////////////////
+@header-link-text-color: @bw-27; //top navbar link text
+@header-link-text-color-hover: @c-1;
+@header-link-text-color-2: @bw-27; //top navbar link text in case color change on slide
+@header-link-text-color-hover-2: @c-1;
+
+@header-link-bg-color: @c-1; //top navbar link bg
+@header-link-bg-color-hover: @bw-27; //top navbar link bg
+
+@header-background-color: @w-4; //top navbar area color
+
+@header-block-color-1: @bw-27; //home page header block 1
+@header-block-color-2: @bw-27; //home page header block 2
+@header-block-color-3: @bw-27; //home page header block 3
+@header-block-link: @bw-27; //home page header block link
+@header-block-link-bg: @c-1; //home page header block link background
+
+
+//  Location specific fonts    ////////////////////////////
+@header-link-ff: @ff-1;
+@header-block-ff-1: @ff-1;
+@header-block-ff-2: @ff-2;
+@header-block-ff-3: @ff-1;
+
+
+.c9-header{
+    height: 100vh;
+    .navbar{
+        .bg(@t);
+        border: none;
+        position: absolute;
+    }
+
+    .navbar-header{
+        .navbar-toggle{}
+        .navbar-brand{
+            height: auto;
+            padding: 0;
+            img{
+                height: 90px;
+            }
+            .brand-img-w{
+                display: block;
+            }
+            .brand-img-b{
+                display: none;
+            }
+        }
+    }
+    .collapse{
+        .nav{
+            .bg(@t);
+            li{
+                a{
+                    font-size: @header-link-text-size;
+                    color: @header-link-text-color;
+                    font-family: @header-link-ff;
+                    font-weight: bold;
+                    display: block;
+                    line-height: 90px;
+                    padding: 0 15px;
+                    text-transform: uppercase;
+                    &:hover{
+                        color: @header-link-text-color-hover;
+                    }
+
+                    i{
+                        width: 34px;
+                        height: 34px;
+                        margin: -10px -10px 0 -10px;
+                        padding-top: 10px;
+                        color: @bw-27;
+                        .bg(@c-1);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    .boxgallery{
+        height: 100vh;
+        .panel{
+            .bg(@t);
+            img{
+            }
+        }
+    }
+
+    .bg-img{
+        .single-image{
+            width: 100% !important;
+        }
+    }
+}
+
+.c9-home{
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+
+    .header-text{
+        .bg(@b-3);
+        height: 100vh;
+
+        .home-h2{
+            color: @header-block-color-2;
+            font-size: @header-block-text-size-2;
+            font-family: @header-block-ff-2;
+
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            margin-left: -50%;
+            top: 23%;
+        }
+
+        .home-p{
+            color: @header-block-color-3;
+            font-family: @header-block-ff-3;
+            font-size: @header-block-text-size-3;
+
+            width: 60%;
+            position: absolute;
+            left: 70%;
+            top: 45%;
+            margin-left: -50%;
+        }
+
+        .home-link{
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            margin-left: -50%;
+
+            a{
+                color: @header-block-link;
+                font-size: @header-block-link-text;
+                .bg(@header-block-link-bg);
+                padding: 12px 20px;
+                border: 2px solid @header-block-link;
+                border-radius: 20px;
+
+                &:hover{
+                    .bg(@w-1);
+                    color: @bw-27;
+                }
+            }
+        }
+        .trigger{
+            position: absolute;
+            .bg(@t);
+            border: none;
+            width: 100%;
+            left: 50%;
+            top: 75%;
+            margin-left: -50%;
+
+            .fa{
+                font-size: 1.8em;
+                color: @bw-27;
+                &:hover{
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices 
+    .row {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        overflow: hidden;
+    }
+    .c9-header{
+        .boxgallery{
+            .panel{
+                .bg-img img{
+                    margin-left: -300px !important;
+                }
+            }
+        }
+        .navbar{
+            .navbar-toggle{
+                margin-top: 22px;
+                margin-right: 20px;
+            }
+            .navbar-header{
+            }
+            .navbar-collapse{
+                .bg(@bw-30);
+                max-height: none;
+                ul li a{
+                    line-height:50px !important;
+                    color: @bw-10 !important;
+                    padding: 0 !important;
+                    text-align: center;
+                }
+            }
+            .navbar-brand{
+                img{
+                    width: 120px !important;
+                }
+            }
+        }
+    }
+    .c9-home{
+        .home-h2{
+            font-size: @header-block-text-size-2-mobile !important;
+            letter-spacing: 20px !important;
+            top: 20% !important;
+        }
+        .home-p{
+            width: 80% !important;
+            left: 60% !important;
+            top: 50% !important;
+        }
+        .home-link{
+            top: 70% !important;
+        }
+        .trigger{
+            top: 83% !important;
+        }
+    }
+}

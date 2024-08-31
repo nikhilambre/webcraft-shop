@@ -1,0 +1,213 @@
+@import "theme-light";
+@import "mixins";
+@import "delay";
+
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Bree Serif', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #92CAE6;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 30px;
+@text-size: 14px;
+@text-size-mobile: 16px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 32px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+@text-size-10: 40px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-4;
+@header-col-dark-1: @bw-10;
+@header-col-dark-2: @bw-17;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-4;
+@text-col-dark-1: @bw-10;
+@text-col-dark-2: @bw-17;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-4;
+@lead-text-col-dark-1: @bw-10;
+@lead-text-col-dark-2: @bw-17;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+
+.sec-s56{
+    padding: 100px 0;
+    position: relative;
+
+    .s56-head{
+        margin-bottom: 60px;
+        .head-text{
+            font-family: @header-ff;
+            color: @header-col-dark;
+            font-size: @header-size;
+        }
+    }
+
+    .sign-part{
+        position: absolute;
+        left: 50%;
+        top: 100%;
+
+        &::before{
+            bottom: 30px;
+            left: 10px;
+            content: " ";
+            position: absolute;
+            display: inline-block;
+            width: 1px;
+            height: 100px;
+            .bg(@bw-20);
+        }
+
+        &::after{
+            top: 30px;
+            left: 10px;
+            content: " ";
+            position: absolute;
+            display: inline-block;
+            width: 1px;
+            height: 160px;
+            .bg(@bw-20);
+        }
+    }
+    .login{
+        padding: 20px 40px 20px 20px;
+
+        .input-col{
+            position: relative;
+            margin-bottom: 10px;
+
+            .form-control{
+                padding-left: 45px;
+            }
+            .fa{
+                position: absolute;
+                top: 14px;
+                left: 30px;
+                color: @c-1;
+                font-size: 1.2em;
+            }
+            .btn{
+                .bg(@c-1);
+                color: @gb-30;
+            }
+        }
+    }
+    .social{
+        padding: 20px 20px 20px 60px;
+
+        a{
+            font-size: 1.2em;
+            display: block;
+            padding: 13px 5px;
+            color: @c-2;
+            .bg(@bw-24);
+            border-radius: 6px;
+            margin-bottom: 22px;
+
+            &:hover{
+                color: @c-1;
+            }
+
+            .fa-facebook{
+                color: #3b5998;
+            }
+            .fa-twitter{
+                color: #55acee;
+            }
+            .fa-google-plus-g{
+                color: #dd4b39;
+            }
+        }
+
+        .fab{
+            font-size: 1.4em;
+            text-align: center;
+            color: @c-1;
+            display: inline-block;
+            width: 54px;                            
+            vertical-align: middle;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .p-text{
+        font-size: 16px !important;
+    }
+    .sec-s56{
+        .sign-part{
+            display: none !important;
+        }
+        .login{
+            padding: 0 !important;
+            margin-bottom: 40px !important;
+        }
+        .social{
+            padding: 0 !important;
+        }
+    }
+}

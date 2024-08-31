@@ -1,0 +1,112 @@
+.cbp-hrmenu > ul > li {
+	display: block;
+}
+
+/* sub-menu */
+.cbp-hrmenu .cbp-hrsub {
+	display: none;
+    z-index: 99999;
+    position: absolute;
+    min-width: 100%;
+    left: 0;
+    right: 0;
+    top: 70px;
+}
+
+.cbp-hropen .cbp-hrsub {
+	display: block;
+}
+
+.cbp-hrmenu .cbp-hrsub-inner > div {
+	width: 25%;
+	float: left;
+	padding: 0 1em 0;
+}
+
+.cbp-hrmenu .cbp-hrsub-inner:before,
+.cbp-hrmenu .cbp-hrsub-inner:after {
+	content: " ";
+	display: table;
+}
+
+.cbp-hrmenu .cbp-hrsub-inner:after {
+	clear: both;
+}
+
+.cbp-hrsub h4 {
+	margin: 0;
+}
+
+
+/* Examples for media queries */
+
+@media screen and (max-width: 52.75em) { 
+
+	.cbp-hrmenu {
+		font-size: 100%;
+	}
+	.cbp-hrmenu .cbp-hrsub {
+
+	}	
+	.cbp-hrmenu .cbp-hrsub {
+		z-index: 99999;
+		position: static;
+	}	
+
+}
+
+@media screen and (max-width: 43em) { 
+
+	.cbp-hrmenu {
+		font-size: 120%;
+		border: none;
+	}
+	.cbp-hrmenu .cbp-hrsub-inner > div {
+		width: 100%;
+		float: none;
+		padding: 0 2em;
+	}	
+
+	.cbp-hrmenu > ul,
+	.cbp-hrmenu .cbp-hrsub-inner {
+		width: 100%;
+		padding: 0;
+	}
+
+	.cbp-hrmenu .cbp-hrsub-inner {
+		padding: 0 2em;
+		font-size: 75%;
+	}
+
+	.cbp-hrmenu > ul > li {
+		display: block;
+	}
+
+	.cbp-hrmenu > ul > li > a { 
+		display: block;
+		padding: 1em 3em;
+	}
+
+	.cbp-hrmenu .cbp-hrsub { 
+		position: relative;
+	}
+
+	.cbp-hrsub h4 {
+		padding-top: 0.6em;
+	}
+	.cbp-hrmenu .cbp-hrsub {
+		z-index: 99999;
+		position: static;
+	}
+}
+
+@media screen and (max-width: 36em) { 
+	.cbp-hrmenu .cbp-hrsub-inner > div {
+		float: none;
+		padding: 0 2em;
+	}
+	.cbp-hrmenu .cbp-hrsub {
+		z-index: 99999;
+		position: static;
+	}	
+}

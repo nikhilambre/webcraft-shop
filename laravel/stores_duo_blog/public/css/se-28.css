@@ -1,0 +1,28 @@
+.sec-s28 {
+  padding: 20px 0;
+  margin: 20px 0;
+  border-bottom: 1px solid #d0d0d0;
+  border-top: 1px solid #d0d0d0;
+}
+.sec-s28 .s28-b1 {
+  padding: 0;
+}
+.sec-s28 .s28-b1 .b1-link {
+  padding: 30px;
+  background-color: #f0f0f0;
+  display: block;
+  text-decoration: none;
+}
+.sec-s28 .s28-b1 .b1-link .b1-dir.p-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #4bb7cc;
+  font-size: 14px;
+}
+.sec-s28 .s28-b1 .b1-link .b1-post {
+  color: #787878;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

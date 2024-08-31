@@ -1,0 +1,30 @@
+.sid-s11 {
+  padding: 15px;
+  margin: 30px 0;
+}
+.sid-s11 .s11-b1 .b1-h3 {
+  font-family: 'Lato', serif;
+  font-size: 18px;
+  color: #181818;
+  border-bottom: 1px solid #d0d0d0;
+  margin-top: 0;
+  padding-bottom: 15px;
+}
+.sid-s11 .s11-b2 .b2-li {
+  margin-bottom: 50px;
+}
+.sid-s11 .s11-b2 .b2-li .b2-img .img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.sid-s11 .s11-b2 .b2-li .b2-text .b2-p {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #484848;
+  font-size: 14px;
+}
+.sid-s11 .s11-b2 .b2-li .b2-text .b2-a {
+  font-family: 'Open Sans', sans-serif;
+  color: #a8a8a8;
+  font-size: 14px;
+}

@@ -1,0 +1,100 @@
+@import "theme-light";
+@import "mixins";
+@import "var-blog-22";
+
+
+.sec-s55{
+    padding: 20px 0;
+
+    .s55-head{
+        padding: 0;
+        
+        h3.head-text{
+            font-size: 20px;
+            font-family: @ff-2;
+            padding-bottom: 8px;
+            position: relative;
+            margin: 0 0 30px;
+            font-weight: 700;
+
+            &:before{
+                content: "";
+                width: 100px;
+                height: 2px;
+                background: @c-2;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+    .comment-img{
+        img{
+            padding: 0 15px;
+            width: 100%;
+        }
+    }
+    .comment-content{
+        margin-bottom: 50px;
+    }
+    .comment-name{
+        p{
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        padding-bottom: 4px;
+    }
+    .comment-rating{
+        padding: 5px 0 15px 0;
+        .red{
+            color: @l-2;
+        }
+        .yellow{
+            color: #FFCC36;
+        }
+        .green{
+            color: @l-1;
+        }
+    }
+    .comment-text p{
+        font-family: @text-ff;
+        color: @text-col-dark-2;
+        font-size: @text-size;
+    }
+    .comment-link{
+        a{
+            font-family: @text-ff;
+            color: @text-col-dark;
+            font-size: @text-size;
+
+            padding: 2px 10px 2px 10px;
+            margin: 6px 0px 3px 0px;
+            border-left: 1px solid @bw-24;
+
+            &:hover{
+                color: @text-col-dark-2;
+            }
+        }
+    }
+
+}
+
+
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+    .comment-img{
+        img{
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+}

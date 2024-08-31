@@ -1,0 +1,331 @@
+@import "theme-light";
+@import "mixins";
+@import (less) "../css/sidebartransitions1.css";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Dosis', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+@c-1:   #01A2A6;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+@c-5:   #01A2A6;
+@c-6:   #082f4e;
+@c-7:   #011222;
+
+@c-8:   #8898aa;
+@c-9:   #6b7c93;
+@c-10:  #43575d;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-link-text-size: 14px;
+
+@header-block-text-size-1: 16px;
+@header-block-text-size-1-mobile: 14px;
+
+@header-block-text-size-2: 80px;
+@header-block-text-size-2-mobile: 60px;
+
+@header-block-text-size-3: 18px;
+@header-block-text-size-3-mobile: 14px;
+
+@header-block-link-text: 14px;
+
+@header-size: 36px;
+@text-size: 14px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+
+
+//  Location specific colors    ////////////////////////////
+@header-link-text-color: @bw-25; //top navbar link text
+@header-link-text-color-hover: @c-1;
+@header-link-text-color-2: @bw-25; //top navbar link text in case color change on slide
+@header-link-text-color-hover-2: @c-1;
+
+@header-link-bg-color: @c-1; //top navbar link bg
+@header-link-bg-color-hover: @bw-27; //top navbar link bg
+
+@header-background-color: @w-4; //top navbar area color
+
+@header-block-color-1: @bw-27; //home page header block 1
+@header-block-color-2: @bw-27; //home page header block 2
+@header-block-color-3: @bw-27; //home page header block 3
+@header-block-link: @bw-27; //home page header block link
+@header-block-link-bg: @c-1; //home page header block link background
+
+
+//  Location specific fonts    ////////////////////////////
+@header-link-ff: @ff-1;
+@header-block-ff-1: @ff-1;
+@header-block-ff-2: @ff-2;
+@header-block-ff-3: @ff-1;
+
+
+.c12-header .navbar{
+    .bg(@b-1);
+    .tra(@tra-1);
+    border: none;
+    position: absolute;
+
+    .navbar-header{
+        .navbar-toggle{}
+
+        .navbar-brand{
+            height: auto;
+            padding: 0;
+
+            img{
+                height: 90px;
+            }
+
+            .brand-img-w{
+                display: block;
+            }
+            .brand-img-b{
+                display: none;
+            }
+        }
+    }
+
+    .collapse{
+        .nav{
+            li{
+                a{
+                    display: block;
+                    color: @header-link-text-color;
+                    font-family: @header-link-ff;
+                    font-size: @header-link-text-size;
+                    padding: 0 15px;
+                    line-height: 90px;
+                    text-transform: uppercase;
+
+                    &:hover{
+                        color: @c-1;
+                    }
+
+                    i{
+                        width: 34px;
+                        height: 34px;
+                        margin: -10px -10px 0 -10px;
+                        padding-top: 10px;
+                        color: #fff;
+                        .bg(@c-1);
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .over-btn{
+                button{
+                    padding: 0 20px;
+                    margin-top: 3px;
+                    line-height: 90px;
+                    background-color: transparent;
+                    border: none;
+
+                    &:focus{
+                        border: none;
+                    }
+
+                    .fa{
+                        color: @header-link-text-color;
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c12-home{
+    position: relative;
+    background-image:url('../images/bg14.jpg');
+    background-attachment:fixed ;
+    width:100%;
+    height:100vh;
+    background-size: cover;
+
+    .c6-cover{
+        .bg(@b-3);
+    }
+
+    .home-box{
+        padding-top: 17%;
+        height:100vh;
+
+        .home-span{
+            color: @header-block-color-1;
+            font-size: @header-block-text-size-1;
+            font-family: @header-block-ff-1;
+            border-bottom: 2px solid @header-block-color-1;
+        }
+
+        .home-h2{
+            color: @header-block-color-2;
+            font-size: @header-block-text-size-2;
+            font-family: @header-block-ff-2;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin: 20px 0;
+            letter-spacing: 40px;
+        }
+
+        .home-p{
+            color: @header-block-color-3;
+            font-family: @header-block-ff-3;
+            font-size: @header-block-text-size-3;
+            width: 70%;
+            margin-left: 15%;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            font-size: 16px;
+        }
+
+        .home-link{
+            margin-top: 40px;
+            a{
+                color: @header-block-link;
+                font-size: @header-block-link-text;
+                .bg(@header-block-link-bg);
+                padding: 7px 18px;
+                border: 2px solid @header-block-link;
+                border-radius: 20px;
+
+                &:hover{
+                    .bg(@bw-27);
+                    color: @c-2;
+                }
+            }
+        }
+    }
+}
+
+.st-menu{
+    .bg(@b-5);
+    .side-head{
+        .bg(@bw-1);
+        padding: 1em;
+        color: @header-link-text-color-2;
+    }
+    .ul-side-nav{
+        border-bottom: 1px solid @bw-2;
+        border-top: 1px solid @bw-2;
+        padding: 30px 0;
+        margin-bottom: 30px;
+        li{
+            a{
+                color: @header-link-text-color-2;
+                padding: 15px 20px;
+
+                &:hover{
+                    color: @c-1;
+                }
+
+                .fa{
+                    display:inline-block;
+                    width: 45px;
+                    font-size: 18px;
+                    color: @c-1;
+                }
+            }
+        }
+    }
+    .ul-social-nav{
+        li{
+            a{
+                display: inline-block;
+                text-align: center;
+                width: 34px;
+                height: 34px;
+                .bg(@w-2);
+
+                i{
+                    margin-top: 10px;
+                    color: @header-link-text-color-2;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .row {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        overflow: hidden;
+    }
+    .c12-header{
+        .navbar{
+            .navbar-toggle{
+                margin-top: 22px;
+                margin-right: 20px;
+            }
+            .navbar-collapse{
+                .bg(@bw-30);
+                max-height: none;
+                ul li a{
+                    line-height:50px !important;
+                    color: @bw-10 !important;
+                    padding: 0 !important;
+                    text-align: center;
+                }
+            }
+            .navbar-brand{
+                padding: 0 0 0 20px !important;
+                img{
+                    width: 120px !important;
+                }
+            }
+        }
+    }
+    .c12-home{
+        .home-box{
+            padding-top: 180px;
+        }
+        .home-h2{
+            font-size: @header-block-text-size-2-mobile !important;
+            letter-spacing: 3px !important;
+            margin-left: 15px !important;
+        }
+        .home-p{
+        }
+        .home-span{
+        }
+    }
+}

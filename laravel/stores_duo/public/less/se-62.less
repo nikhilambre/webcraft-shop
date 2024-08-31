@@ -1,0 +1,435 @@
+@import "theme-light";
+@import "mixins";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Varela Round', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #0baf4e;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 30px;
+@text-size: 14px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-2;
+@header-col-dark-1: @bw-8;
+@header-col-dark-2: @bw-12;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-2;
+@text-col-dark-1: @bw-8;
+@text-col-dark-2: @bw-15;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-2;
+@lead-text-col-dark-1: @bw-8;
+@lead-text-col-dark-2: @bw-15;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+
+  input[type="checkbox"] {
+    opacity: 0;
+    display: none;
+  }
+
+
+
+  
+  .slide-one label {
+    background: #999;
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+    position: relative;
+    display: inline-block;
+    transition: all 1s;
+    cursor: pointer;
+  }
+  .slide-one label:after{
+    width: 30px;
+    height: 30px;
+    background: #fcfff4;
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -webkit-linear-gradient(top, #FFF 0%, #F6F6F6 40%, #FFF 100%);
+    display: inline-block;
+    position: absolute;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 50%;
+    left: -2px;
+    top: -5px;
+    content: "";
+    transition: all 0.5s;
+  }
+  .id-slide-one:checked ~ label {
+    background: green;
+  }
+  .id-slide-one:checked ~ label:after {
+    left: calc(100% - 30px);
+  }
+
+
+
+
+
+  .slide-two {
+    position: relative;
+  }
+  .slide-two label {
+    cursor: pointer;
+  }
+  .slide-two label:before {
+    border: 2px solid @c-1;
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .slide-two label:after {
+    position: absolute;
+    border-left: 2px solid @c-1;
+    border-bottom: 2px solid @c-1;
+    content: "";
+    width: 14px;
+    height: 6px;
+    transform: rotate(-45deg);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    left: 4px;
+    top: 6px;
+    opacity: 0;
+  }
+  .id-slide-two:checked ~ label:after {
+    opacity: 1;
+  }
+  
+
+
+
+
+  .slide-three {
+    position: relative;
+  }
+  .slide-three label {
+    cursor: pointer;
+  }
+  .slide-three label:before {
+    border: 2px solid @c-1;
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .slide-three label:after {
+    position: absolute;
+      background: @c-1;
+      background: linear-gradient(top, @c-1 0%, darken(@c-1, 5%) 40%, darken(@c-1, 10%) 100%);
+    background: -webkit-linear-gradient(top, @c-1 0%, darken(@c-1, 5%) 40%, darken(@c-1, 10%) 100%);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    left: 4px;
+    top: 5px;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  .id-slide-three:checked ~ label:after {
+    opacity: 1;
+  }
+  
+  .slide-four label {
+    background: #999;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+    position: relative;
+    display: inline-block;
+    transition: all 1s;
+    cursor: pointer;
+  }
+  .slide-four label:before{ 
+    content: "Off";
+    display: inline-block;
+    color: #000;
+    position: absolute;
+    right: 15px;
+    text-transform: uppercase;
+    line-height: 30px;
+    transition: all 0.5s;
+    text-shadow: 1px 1px 0px rgba(255,255,255,.15);
+  }
+  .slide-four label:after{
+    width: 30px;
+    height: 30px;
+    background: #fcfff4;
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -webkit-linear-gradient(top, #FFF 0%, #F6F6F6 40%, #FFF 100%);
+    display: inline-block;
+    position: absolute;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    left: 0px;
+    top: 0px;
+    content: "";
+    transition: all 0.5s;
+  }
+  .id-slide-four:checked ~ label {
+    background: green;
+  }
+  .id-slide-four:checked ~ label:after {
+    left: calc(100% - 30px);
+  }
+  
+  .id-slide-four:checked ~ label:before{ 
+    content: "On";
+    right: auto;
+    left: 15px;
+    color: #FFF;
+    text-shadow: 1px 1px 0px rgba(0,0,0,.15);
+  }
+  
+  
+  .slide-five label {
+    background: #999;
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+    position: relative;
+    display: inline-block;
+    transition: all 1s;
+    cursor: pointer;
+  }
+  .slide-five label:before{ 
+    content: "Off";
+    display: inline-block;
+    color: #000;
+    position: absolute;
+    right: 15px;
+    text-transform: uppercase;
+    line-height: 30px;
+    text-shadow: 1px 1px 0px rgba(255,255,255,.15);
+    transition: all 0.5s;
+  }
+  .slide-five label:after{
+    width: 30px;
+    height: 30px;
+    background: #fcfff4;
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -webkit-linear-gradient(top, #FFF 0%, #F6F6F6 40%, #FFF 100%);
+    display: inline-block;
+    position: absolute;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    left: 0px;
+    top: 0px;
+    border-radius: 50%;
+    content: "";
+    transition: all 0.5s;
+  }
+  .id-slide-five:checked ~ label {
+    background: green;
+  }
+  .id-slide-five:checked ~ label:after {
+    left: calc(100% - 30px);
+  }
+  
+  .id-slide-five:checked ~ label:before{ 
+    content: "On";
+    right: auto;
+    left: 15px;
+    color: #FFF;
+    text-shadow: 1px 1px 0px rgba(0,0,0,.15);
+  }
+  
+  .slide-six {
+    position: relative;
+  }
+  .slide-six label {
+    cursor: pointer;
+  }
+  .slide-six label:before {
+    border: 2px solid @c-1;
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .slide-six label:after {
+    position: absolute;
+    border-left: 2px solid @c-1;
+    border-right: 10px solid #FFF;
+    border-bottom: 2px solid @c-1;
+    content: "";
+    width: 14px;
+    height: 6px;
+    transform: rotate(-45deg);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    left: 4px;
+    top: 2px;
+    opacity: 0;
+    box-shadow: 0px 4px 0px 0px #FFF;
+  }
+  .id-slide-six:checked ~ label:after {
+    opacity: 1;
+  }
+  
+  .slide-seven label {
+    background: #999;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+    position: relative;
+    display: inline-block;
+    transition: all 1s;
+    cursor: pointer;
+  }
+  .slide-seven label:before{ 
+    content: "Off";
+    display: inline-block;
+    color: #000;
+    position: absolute;
+    width: calc(50% - 1px);
+    text-align: center;
+    left: 0px;
+    z-index: 2;
+    text-transform: uppercase;
+    line-height: 30px;
+    transition: all 0.5s;
+    text-shadow: 1px 1px 0px rgba(255,255,255,.15);
+  }
+  .slide-seven label:after{
+    width: 50%;
+    height: 28px;
+    background: #fcfff4;
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -webkit-linear-gradient(top, #FFF 0%, #F6F6F6 40%, #FFF 100%);
+    display: inline-block;
+    position: absolute;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    left: 1px;
+    top: 1px;
+    content: "";
+    line-height: 28px;
+    text-align: center;
+    transition: all 0.5s;
+    text-shadow: 1px 1px 0px rgba(255,255,255,.15);
+  }
+  .id-slide-seven:checked ~ label {
+    background: green;
+  }
+  .id-slide-seven:checked ~ label:after {
+    left: calc(50% - 1px);
+  }
+  
+  .id-slide-seven:checked ~ label:before{ 
+    content: "On";
+    left: 50%;
+    color: #000;
+  }
+  
+  .slide-eight label {
+    background: #999;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-indent: 30px;
+    line-height: 24px;
+  }
+  
+  .slide-eight label:after{
+    position: absolute;
+    border-left: 2px solid #FFF;
+    border-bottom: 2px solid #FFF;
+    content: "";
+    width: 14px;
+    height: 6px;
+    transform: rotate(-45deg);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    left: 4px;
+    top: 5px;
+    opacity: 0;
+    box-shadow: 0px 2px 0px 0px rgba(0,0,0, 0.2);
+  }
+  .id-slide-eight:checked ~ label {
+    background: green;
+  }
+  .id-slide-eight:checked ~ label:after {
+    opacity: 1;
+  }

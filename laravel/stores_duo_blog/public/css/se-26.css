@@ -1,0 +1,36 @@
+.sec-s26 {
+  padding: 20px 0;
+}
+.sec-s26 .s26-b1 h3.head-text {
+  font-family: 'Lato', serif;
+  color: #181818;
+  font-size: 30px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d0d0d0;
+}
+.sec-s26 .s26-b2 .b2-ul .b2-li {
+  margin: 5px 0;
+}
+.sec-s26 .s26-b2 .b2-ul .b2-li .b2-a {
+  font-family: 'Open Sans', sans-serif;
+  color: #484848;
+  font-size: 14px;
+  min-width: 34px;
+  text-align: center;
+  padding: 7px 10px;
+  display: inline-block;
+  border: 1px solid transparent;
+  background-color: #e8e8e8;
+  -webkit-transition: all 100ms ease-in-out 0s;
+  -moz-transition: all 100ms ease-in-out 0s;
+  -ms-transition: all 100ms ease-in-out 0s;
+  -o-transition: all 100ms ease-in-out 0s;
+  transition: all 100ms ease-in-out 0s;
+}
+.sec-s26 .s26-b2 .b2-ul .b2-li .b2-a .svg-inline--fa {
+  color: #4bb7cc;
+}
+.sec-s26 .s26-b2 .b2-ul .b2-li .b2-a:hover {
+  border: 1px solid #4bb7cc;
+}

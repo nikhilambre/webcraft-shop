@@ -1,0 +1,147 @@
+@import "theme-light";
+@import "mixins";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Varela Round', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #0baf4e;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 30px;
+@text-size: 14px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-2;
+@header-col-dark-1: @bw-8;
+@header-col-dark-2: @bw-12;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-2;
+@text-col-dark-1: @bw-8;
+@text-col-dark-2: @bw-15;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-2;
+@lead-text-col-dark-1: @bw-8;
+@lead-text-col-dark-2: @bw-15;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+
+/* CHECKBOX STYLE */
+.mod__l {
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+}
+.mod__l * {
+    box-sizing: border-box;
+}
+.mod__input {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    border: 2px solid #555;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+.mod__text {
+    display: inline-block;
+}
+.mod__c {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mod__c path {
+    fill: none;
+    stroke: #555;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.mod__c--1 {
+    stroke-dasharray: 24px;
+    stroke-dashoffset: 24px;
+    transition: all .2s ease;
+}
+.mod__c--2 {
+    stroke-dasharray: 20px;
+    stroke-dashoffset: 20px;
+    transition: all .2s ease;
+}
+.mod__c--3 {
+    stroke-dasharray: 124px;
+    stroke-dashoffset: 124px;
+    transition: all 0.5s ease;
+}
+.mod__c--4 {
+    stroke-dasharray: 19px;
+    stroke-dashoffset: 19px;
+    transition: all 0.5s ease;
+}
+.mod__input input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: 0;
+    position: absolute;
+    z-index: 0;
+}
+.mod__input input[type="checkbox"]:checked + .mod__c {
+    stroke-dashoffset: 0px;
+}

@@ -1,0 +1,289 @@
+@import "theme-light";
+@import "mixins";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Varela Round', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #0baf4e;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 30px;
+@text-size: 14px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-2;
+@header-col-dark-1: @bw-8;
+@header-col-dark-2: @bw-12;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-2;
+@text-col-dark-1: @bw-8;
+@text-col-dark-2: @bw-15;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-2;
+@lead-text-col-dark-1: @bw-8;
+@lead-text-col-dark-2: @bw-15;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+
+
+[type="checkbox"],
+[type="radio"] {
+  border: 0                      !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+  height: 1px                    !important;
+  overflow: hidden               !important;
+  padding: 0                     !important;
+  position: absolute             !important;
+  width: 1px                     !important;
+  white-space: nowrap            !important;
+}
+[type="checkbox"]:focus + label::before,
+[type="radio"]:focus + label::before {
+  box-shadow: 0 0 0 2px rgba(51, 51, 51, 0.4) !important;
+}
+[type="checkbox"]:hover + label::before,
+[type="radio"]:hover + label::before {
+  border-color: #000;
+}
+[type="checkbox"]:active + label::before,
+[type="radio"]:active + label::before {
+  transition-duration: 0;
+}
+[type="checkbox"] + label,
+[type="radio"] + label {
+  position: relative;
+  padding: 6px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+[type="checkbox"] + label::before,
+[type="radio"] + label::before {
+  background-color: #fff;
+  border: 1px solid #444;
+  box-sizing: content-box;
+  content: '';
+  color: #444;
+  margin-right: 6px;
+  top: 50%;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+}
+[type="checkbox"] + label::after,
+[type="radio"] + label::after {
+  box-sizing: content-box;
+  content: '';
+  background-color: #444;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+[type="checkbox"][disabled] + label::before,
+[type="radio"][disabled] + label::before {
+  -webkit-animation: none;
+          animation: none;
+  box-shadow: none;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
+[type="checkbox"][disabled]:active + label::before, [type="checkbox"][disabled]:focus + label::before, [type="checkbox"][disabled]:hover + label::before,
+[type="radio"][disabled]:active + label::before,
+[type="radio"][disabled]:focus + label::before,
+[type="radio"][disabled]:hover + label::before {
+  border-color: rgba(128, 128, 128, 0.5);
+  -webkit-filter: none;
+          filter: none;
+  transition: none;
+}
+
+[type="checkbox"] + label::before, [type="checkbox"] + label::after {
+  border-radius: 0;
+}
+[type="checkbox"] + label::after {
+  background-color: transparent;
+  top: 50%;
+  left: calc(6px + 1px + 24px/5);
+  width: 12px;
+  height: 4.8px;
+  margin-top: calc(24px / -2 / 2 * 0.8);
+  border-style: solid;
+  border-color: #444;
+  border-width: 0 0 3px 3px;
+  border-radius: 0;
+  -o-border-image: none;
+     border-image: none;
+  -webkit-transform: rotate(-45deg) scale(0);
+          transform: rotate(-45deg) scale(0);
+  transition: none;
+}
+[type="checkbox"]:checked + label::after {
+  content: '';
+  -webkit-transform: rotate(-45deg) scale(1);
+          transform: rotate(-45deg) scale(1);
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+[type="radio"] + label::before, [type="radio"] + label::after {
+  border-radius: 50%;
+}
+[type="radio"]:checked:active + label::before, [type="radio"]:checked:focus + label::before {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-filter: none;
+          filter: none;
+  transition: none;
+}
+[type="radio"]:checked + label::before {
+  -webkit-animation: none;
+          animation: none;
+  background-color: #fff;
+}
+[type="radio"]:checked + label::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+@-webkit-keyframes borderscale {
+  50% {
+    box-shadow: 0 0 0 2px #900;
+  }
+}
+
+@keyframes borderscale {
+  50% {
+    box-shadow: 0 0 0 2px #900;
+  }
+}
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%228%22%20viewBox%3D%220%200%2016%208%22%3E%3Cpolygon%20fill%3D%22%234D4D4D%22%20points%3D%228%2C0%2016%2C0%2012%2C4%208%2C8%204%2C4%200%2C0%20%22/%3E%3C/svg%3E);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  border: 1px solid grey;
+  border-radius: 0;
+  padding: 0.25em 0.4em;
+  padding-right: 1.5em;
+}
+select:focus, select:hover {
+  border-color: black;
+  outline: none;
+}
+select:active {
+  border-color: #900;
+}
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+/* IE 10/11+ - This hides native dropdown button arrow so it will have the custom appearance, IE 9 and earlier get a native select - targeting media query hack via http://browserhacks.com/#hack-28f493d247a12ab654f6c3637f6978d5 - looking for better ways to achieve this targeting */
+/* The second rule removes the odd blue bg color behind the text in the select button in IE 10/11 and sets the text color to match the focus style's - fix via http://stackoverflow.com/questions/17553300/change-ie-background-color-on-unopened-focused-select-box */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  select::-ms-expand {
+    display: none;
+  }
+
+  select:focus::-ms-value {
+    background: transparent;
+    color: grey;
+  }
+}
+.error-msg {
+  display: block;
+  color: red;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 500ms ease-out;
+  will-change: max-height;
+}
+
+:required:not(:focus) ~ .error-msg,
+:invalid:required ~ .error-msg {
+  max-height: 9em;
+}
+
+input:focus {
+  border: 1px solid black;
+}
+
+input:not(:focus):invalid {
+  border: 1px solid red;
+  outline: none;
+}
+
+input:not(:focus):valid {
+  border: 1px solid green;
+}

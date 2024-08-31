@@ -1,0 +1,247 @@
+@import "theme-light";
+@import "mixins";
+@import (less) "../css/slidingimagepanels1.css";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Montserrat', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+@c-1:   #c0996b;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+@c-5:   #01A2A6;
+@c-6:   #082f4e;
+@c-7:   #011222;
+
+@c-8:   #8898aa;
+@c-9:   #6b7c93;
+@c-10:  #43575d;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-link-text-size: 14px;
+
+@header-block-text-size-1: 16px;
+@header-block-text-size-1-mobile: 14px;
+
+@header-block-text-size-2: 60px;
+@header-block-text-size-2-mobile: 36px;
+
+@header-block-text-size-3: 18px;
+@header-block-text-size-3-mobile: 14px;
+
+@header-block-link-text: 14px;
+
+@header-size: 36px;
+@text-size: 14px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+
+
+//  Location specific colors    ////////////////////////////
+@header-link-text-color: @bw-27; //top navbar link text
+@header-link-text-color-hover: @c-1;
+@header-link-text-color-2: @bw-7; //top navbar link text in case color change on slide
+@header-link-text-color-hover-2: @c-1;
+
+@header-link-bg-color: @bw-7; //top navbar link bg
+@header-link-bg-color-hover: @bw-7; //top navbar link bg
+
+@header-background-color: @w-4; //top navbar area color
+
+@header-block-color-1: @bw-27; //home page header block 1
+@header-block-color-2: @bw-27; //home page header block 2
+@header-block-color-3: @bw-27; //home page header block 3
+@header-block-link: @bw-27; //home page header block link
+@header-block-link-bg: @c-1; //home page header block link background
+
+
+//  Location specific fonts    ////////////////////////////
+@header-link-ff: @ff-1;
+@header-block-ff-1: @ff-1;
+@header-block-ff-2: @ff-2;
+@header-block-ff-3: @ff-1;
+
+.c7-head-box{
+    overflow: hidden;
+
+    .c7-header .navbar{
+        .bg(@t);
+        .tra(@tra-1);
+        border-color: @bw-7;
+
+        .navbar-header{
+            .navbar-toggle{}
+            .navbar-brand{
+                height: auto;
+                padding: 0;
+
+                img{
+                    height: 90px;
+                }
+
+                .brand-img-w{
+                    display: block;
+                }
+                .brand-img-b{
+                    display: none;
+                }
+            }
+        }
+
+        .collapse{
+            .nav{
+                li{
+                    a{
+                        display: block;
+                        color: @header-link-text-color;
+                        font-family: @header-link-ff;
+                        font-size: @header-link-text-size;
+                        padding: 0 15px;
+                        line-height: 80px;
+                        text-transform: uppercase;
+
+                        i{
+                            width: 34px;
+                            height: 34px;
+                            margin: -10px -10px 0 -10px;
+                            padding-top: 10px;
+                            color: #fff;
+                            .bg(@c-1);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .c7-header.header-white .navbar{
+        .bg(@header-background-color);
+        .navbar-brand{
+            .brand-img-w{
+                display: none;
+            }
+            .brand-img-b{
+                display: block;
+                height: 80px;
+            }
+        }
+        .collapse li a {
+            line-height: 80px;
+            color: @header-link-text-color-2;    
+            &:hover{
+                color: @header-link-text-color-hover-2;
+            }
+        }
+    }
+
+    .c7-container{
+
+    }
+
+    .c7-bgimg{}
+
+    .c7-titles{
+        h3{
+            span:nth-child(1){
+                .bg(@b-2);
+                color: @header-block-color-2;
+                font-size: @header-block-text-size-2;
+                font-family: @header-block-ff-2;
+                letter-spacing: 10px;
+                font-weight: bold;
+                display: block;
+            }
+
+            span:nth-child(2){
+                .bg(@b-2);
+                color: @header-block-color-3;
+                font-family: @header-block-ff-3;
+                font-size: @header-block-text-size-3;
+                letter-spacing: 0px;
+                display: block;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices 
+    .row {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        overflow: hidden;
+    }
+    .c7-head-box{
+        .c7-header .navbar{
+            .navbar-toggle{
+                margin-top: 22px;
+                margin-right: 20px;
+            }
+            .navbar-collapse{
+                .bg(@bw-30);
+                max-height: none;
+                ul li a{
+                    line-height:50px !important;
+                    color: @bw-10 !important;
+                    padding: 0 !important;
+                    text-align: center;
+                }
+            }
+            .navbar-brand{
+                padding: 0 0 0 20px !important;
+                img{
+                    width: 120px !important;
+                }
+            }
+        }
+    }
+    .c7-container{
+        width: 100%;
+    }
+    // .c7-bgimg{
+    //     left: -100%;
+    // }
+    .c7-titles{
+        h3{
+            span:first-child{
+                letter-spacing: 0px !important;
+                font-size: 46px !important;
+            }
+        }
+    }
+}

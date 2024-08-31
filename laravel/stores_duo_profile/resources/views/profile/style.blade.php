@@ -1,0 +1,1 @@
+<link href="{{ asset('public/css/profile-1.css') }}" rel="stylesheet">

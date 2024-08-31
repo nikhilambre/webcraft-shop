@@ -1,0 +1,30 @@
+.sec-s52 {
+  padding: 20px 0;
+}
+.sec-s52 .post-tags .p-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #484848;
+  font-size: 14px;
+}
+.sec-s52 .post-title .head-text a {
+  font-family: 'Lato', serif;
+  color: #181818;
+  font-size: 30px;
+}
+.sec-s52 .post-author {
+  padding: 5px 0 15px;
+}
+.sec-s52 .post-author a {
+  font-family: 'Open Sans', sans-serif;
+  color: #34495e;
+  font-size: 14px;
+}
+.sec-s52 .post-img .img {
+  width: 100%;
+  padding: 0 30px 20px 0;
+}
+.sec-s52 .post-short-desc .p-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #484848;
+  font-size: 14px;
+}

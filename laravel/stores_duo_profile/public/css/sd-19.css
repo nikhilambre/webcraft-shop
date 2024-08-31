@@ -1,0 +1,19 @@
+.sid-s19 {
+  padding: 15px;
+  margin-bottom: 30px;
+}
+.sid-s19 .s19-img-box .s19-img {
+  width: 50%;
+  border-radius: 50%;
+}
+.sid-s19 .s19-text .b2-ul .b2-li a {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  background-color: #4bb7cc;
+  color: #ffffff;
+  border-radius: 50%;
+}
+.sid-s19 .s19-text .b2-ul .b2-li a .svg-inline--fa {
+  margin-top: 10px;
+}

@@ -1,0 +1,291 @@
+@import "theme-light";
+@import "mixins";
+@import (less) "../css/da-slider.css";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Montserrat', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+@c-1:   #4BB7CC;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+@c-5:   #01A2A6;
+@c-6:   #082f4e;
+@c-7:   #011222;
+
+@c-8:   #8898aa;
+@c-9:   #6b7c93;
+@c-10:  #43575d;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-link-text-size: 14px;
+
+@header-block-text-size-1: 16px;
+@header-block-text-size-1-mobile: 14px;
+
+@header-block-text-size-2: 70px;
+@header-block-text-size-2-mobile: 50px;
+
+@header-block-text-size-3: 18px;
+@header-block-text-size-3-mobile: 14px;
+
+@header-block-link-text: 14px;
+
+@header-size: 36px;
+@text-size: 14px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+
+
+//  Location specific colors    ////////////////////////////
+@header-link-text-color: @bw-1; //top navbar link text
+@header-link-text-color-hover: @c-1;
+@header-link-text-color-2: @bw-27; //top navbar link text in case color change on slide
+@header-link-text-color-hover-2: @c-1;
+
+@header-link-bg-color: @bw-7; //top navbar link bg
+@header-link-bg-color-hover: @bw-7; //top navbar link bg
+
+@header-background-color: @w-4; //top navbar area color
+
+@header-block-color-1: @bw-27; //home page header block 1
+@header-block-color-2: @bw-27; //home page header block 2
+@header-block-color-3: @bw-27; //home page header block 3
+@header-block-link: @bw-27; //home page header block link
+@header-block-link-bg: @c-1; //home page header block link background
+
+
+//  Location specific fonts    ////////////////////////////
+@header-link-ff: @ff-1;
+@header-block-ff-1: @ff-1;
+@header-block-ff-2: @ff-2;
+@header-block-ff-3: @ff-1;
+
+
+.c5-header .navbar{
+    .bg(@t);
+    .tra(@tra-1);
+    margin: 0;
+
+    .navbar-header{
+        .navbar-toggle{}
+        .navbar-brand{
+            height: auto;
+            padding: 0;
+
+            img{
+                height: 90px;
+            }
+
+            .brand-img-w{
+                display: block;
+            }
+            .brand-img-b{
+                display: none;
+            }
+        }
+    }
+
+    .collapse{
+        .nav{
+            li{
+                a{
+                    display: block;
+                    color: @header-link-text-color;
+                    font-family: @header-link-ff;
+                    font-size: @header-link-text-size;
+                    padding: 0 15px;
+                    line-height: 90px;
+                    text-transform: uppercase;
+
+                    i{
+                        width: 34px;
+                        height: 34px;
+                        margin: -10px -10px 0 -10px;
+                        padding-top: 10px;
+                        color: #fff;
+                        .bg(@c-1);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.c5-home{
+    width: 100%;
+    height: 493px;
+	position: relative;
+	overflow: hidden;
+	background: transparent url(../images/bg11.jpg) repeat 0% 0%;
+	background-color: #000;
+	-webkit-transition: background-position 1s ease-out 0.3s;
+	-moz-transition: background-position 1s ease-out 0.3s;
+	-o-transition: background-position 1s ease-out 0.3s;
+	-ms-transition: background-position 1s ease-out 0.3s;
+    transition: background-position 1s ease-out 0.3s;
+    
+    .da-slide{
+        background-color: @b-1;
+
+        h2{
+            color: @header-block-color-2;
+            font-size: @header-block-text-size-2;
+            font-family: @header-block-ff-2;
+
+            width: 40%;
+            top: 50px;
+            white-space: nowrap;
+            z-index: 10;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+            font-weight: 700;
+        }
+        p{
+            color: @header-block-color-3;
+            font-family: @header-block-ff-3;
+            font-size: @header-block-text-size-3;
+
+            width: 35%;
+            top: 165px;
+        }
+        .da-link{
+            top: 290px;
+            box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+            color: #fff;
+            border: 2px solid #FFF;
+            padding: 10px 40px;
+            .bg(@c-1);
+            border-radius: 5px;
+            &:hover{
+                .bg(@bw-27);
+            }
+        }
+        .da-img{
+            text-align: center;
+            width: 40%;
+            line-height: 360px;
+            left: 60%;
+            top: 70px;
+            height: 256px;
+
+            img{
+            }
+        }
+    }
+    .da-arrows{
+        span{
+            position: absolute;
+            top: 50%;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background: @c-1;                                    /*  Side arrows background color   */
+            cursor: pointer;
+            z-index: 300;
+            opacity: 0;
+            box-shadow: 
+                1px 1px 1px rgba(0,0,0,0.1) inset, 
+                1px 1px 1px rgba(255,255,255,0.1);
+            -webkit-transition: opacity 0.4s ease-in-out-out 0.2s;
+            -moz-transition: opacity 0.4s ease-in-out-out 0.2s;
+            -o-transition: opacity 0.4s ease-in-out-out 0.2s;
+            -ms-transition: opacity 0.4s ease-in-out-out 0.2s;
+            transition: opacity 0.4s ease-in-out-out 0.2s;
+        }
+    }
+    .da-dots{
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        left: 0px;
+        bottom: 20px;
+        z-index: 300;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+
+        span{
+            display: inline-block;
+            position: relative;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: @c-1;                                    /*  Bottom dots background  */
+            margin: 3px;
+            cursor: pointer;
+            box-shadow: 
+                1px 1px 1px rgba(0,0,0,0.1) inset, 
+                1px 1px 1px rgba(255,255,255,0.1);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .c5-header .navbar{
+        .navbar-toggle{
+            margin-top: 22px;
+            margin-right: 20px;
+        }
+        .navbar-collapse{
+            .bg(@bw-30);
+            max-height: none;
+            ul li a{
+                line-height:50px !important;
+                color: @bw-10 !important;
+            }
+        }
+    }
+    .c5-home{
+        .da-slide{
+            h2{
+                font-size: @header-block-text-size-2-mobile;
+                width: 80%;
+                white-space: normal;
+            }
+            p{
+                font-size: @header-block-text-size-3;
+                width: 80%;
+                top: 185px;
+            }
+            .da-link{
+                top: 350px;
+            }
+            .da-img{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.sec-s33 {
+  padding: 20px 0;
+}
+.sec-s33 .s33-bs {
+  margin-bottom: 60px;
+}
+.sec-s33 .s33-bs .bs-img {
+  max-height: 250px;
+  overflow: hidden;
+}
+.sec-s33 .s33-bs .bs-img .img {
+  width: 100%;
+}
+.sec-s33 .s33-bs .head-text.bs-h3 a {
+  font-family: 'Lato', serif;
+  font-size: 20px;
+  color: #181818;
+}

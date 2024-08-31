@@ -1,0 +1,37 @@
+@import "theme-light";
+@import "mixins";
+@import "var-blog-22";
+
+
+.sec-s28{
+    padding: 20px 0;
+    margin: 20px 0;
+    border-bottom: 1px solid @bw-20;
+    border-top: 1px solid @bw-20;
+
+    .s28-b1{
+        padding: 0;
+
+        .b1-link{
+            padding: 30px;
+            .bg(@bw-24);
+            display: block;
+            text-decoration: none;
+
+            .b1-dir.p-text{
+                font-family: @text-ff;
+                color: @c-1;
+                font-size: @text-size;
+            }
+            .b1-post{
+                color: @bw-14;
+                font-family: @text-ff;
+                font-size: @lead-text-size;
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

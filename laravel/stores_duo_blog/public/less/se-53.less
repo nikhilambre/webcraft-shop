@@ -1,0 +1,53 @@
+@import "theme-light";
+@import "mixins";
+@import "var-blog-22";
+
+
+.sec-s53{
+    padding: 20px 0;
+
+    .s53-head{
+        padding: 0;
+        
+        h3.head-text{
+            font-size: 20px;
+            font-family: @ff-2;
+            padding-bottom: 8px;
+            position: relative;
+            margin: 0 0 30px;
+            font-weight: 700;
+
+            &:before{
+                content: "";
+                width: 100px;
+                height: 2px;
+                background: @c-2;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    .comment-box{
+        padding-bottom: 20px;
+
+        textarea
+        {
+            border-radius: 0;
+            box-shadow: none;
+            border-color: @bw-20;
+        }
+    }
+    .comment-btn{
+        display: inline;
+        margin-right: 10px;
+
+        .save-comm{
+            border-radius: 0;
+            .bg(@c-1);
+            color: @gb-30;
+        }
+        
+    }
+}

@@ -1,0 +1,40 @@
+@import "theme-light";
+@import "mixins";
+@import "var-blog-22";
+
+.sec-s57{
+    .form-subheader{
+        font-family: @header-ff;
+        color: @header-col-dark-1;
+        font-size: @lead-text-size;
+
+        margin-bottom: 40px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid @bw-20;
+    }
+
+    .form-group{}
+    label{
+        margin-top: 10px;
+    }
+    input, textarea{
+        margin-bottom: 10px;
+
+        &:focus{
+            border-color: @c-1;
+            box-shadow: none;
+        }
+    }
+    input#orderTerms{
+        margin-top: 10px;
+    }
+    input#order-active{
+        .bg(@c-1);
+        color: @gb-30;
+        border: none;
+    }
+    .terms{
+        display: inline;
+    }
+
+}

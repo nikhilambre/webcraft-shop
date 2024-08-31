@@ -1,0 +1,98 @@
+.sec-s56 {
+  padding: 60px 0 100px 0;
+  position: relative;
+}
+.sec-s56 .s56-head {
+  margin-bottom: 60px;
+}
+.sec-s56 .s56-head .head-text {
+  font-family: 'Lato', serif;
+  color: #181818;
+  font-size: 30px;
+}
+.sec-s56 .sign-part {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+}
+.sec-s56 .sign-part::before {
+  bottom: 30px;
+  left: 10px;
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 100px;
+  background-color: #484848;
+}
+.sec-s56 .sign-part::after {
+  top: 30px;
+  left: 10px;
+  content: " ";
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 160px;
+  background-color: #484848;
+}
+.sec-s56 .login {
+  padding: 20px 40px 20px 20px;
+}
+.sec-s56 .login .input-col {
+  position: relative;
+  margin-bottom: 20px;
+}
+.sec-s56 .login .input-col .form-control {
+  padding-left: 45px;
+}
+.sec-s56 .login .input-col .form-control:focus {
+  border-color: #484848;
+  box-shadow: none;
+}
+.sec-s56 .login .input-col .svg-inline--fa {
+  position: absolute;
+  top: 14px;
+  left: 30px;
+  color: #4bb7cc;
+  font-size: 1.2em;
+}
+.sec-s56 .login .input-col .btn {
+  background-color: #4bb7cc;
+  color: #ffffff;
+}
+.sec-s56 .social {
+  padding: 20px 20px 20px 60px;
+}
+.sec-s56 .social a {
+  font-size: 1.2em;
+  display: block;
+  padding: 13px 5px;
+  color: #34495e;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  margin-bottom: 22px;
+}
+.sec-s56 .social a:hover {
+  color: #4bb7cc;
+}
+.sec-s56 .social a .fa-facebook {
+  color: #3b5998;
+}
+.sec-s56 .social a .fa-twitter {
+  color: #55acee;
+}
+.sec-s56 .social a .fa-google-plus-g {
+  color: #dd4b39;
+}
+.sec-s56 .social .svg-inline--fa {
+  font-size: 1.4em;
+  text-align: center;
+  color: #4bb7cc;
+  display: inline-block;
+  width: 54px;
+  vertical-align: middle;
+}
+.login-footer p {
+  padding-top: 40px;
+  margin-bottom: 80px;
+}

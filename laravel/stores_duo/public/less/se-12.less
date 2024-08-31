@@ -1,0 +1,193 @@
+@import "theme-light";
+@import "mixins";
+@import "delay";
+
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Lato', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #92CAE6;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 40px;
+@text-size: 14px;
+@text-size-mobile: 16px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+@text-size-10: 40px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-2;
+@header-col-dark-1: @bw-8;
+@header-col-dark-2: @bw-12;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-2;
+@text-col-dark-1: @bw-8;
+@text-col-dark-2: @bw-15;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-2;
+@lead-text-col-dark-1: @bw-8;
+@lead-text-col-dark-2: @bw-15;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+
+.b12-wrap{
+    padding: 60px 0;
+    .bg(@c-13);
+
+    .b12-header{
+        .head-text{
+            position: relative;
+            margin-bottom: 100px;
+            
+            span{
+                font-family: @header-ff;
+                color: @header-col-dark;
+                font-size: @header-size;
+    
+                font-weight: bold;
+                position: relative;
+                margin: 0 auto;
+            }
+    
+            &::before {
+                content: attr(data-title);
+                position: absolute;
+                font-size: 100px;
+                line-height: 1.1;
+                color: #e6f2ff;
+                width: 100%;
+                left: 0;
+                right: 0;
+                top: -25px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .b12-content{
+        .b12-line{
+            margin-bottom: 25px;
+
+            .b12-out{
+                width: 12%;
+                float: left;
+                margin: 7px 0;
+
+                .fa{
+                    width: 48px;
+                    height: 48px;
+                    font-size: 36px;
+                    color: @c-1;
+                    padding-top: 12px;
+                    text-align: center;
+                }
+            }
+
+            .b12-in{
+                width: 88%;
+                .lead-text{
+                    color: @lead-text-col-dark-1;
+                    font-family: @text-ff;
+                    font-size: @text-size-3;
+                    font-weight: 700;
+                }
+                .p-text{
+                    font-family: @text-ff;
+                    color: @text-col-dark-1;
+                    font-size: @text-size;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .p-text{
+        font-size: 16px !important;
+    }
+    .b12-wrap{
+        .b12-header{
+            .head-text{
+                &::before {
+                    font-size: 60px !important;
+                }
+            }
+        }
+        .b12-content{
+            .b12-line{
+                .b12-out{
+                    float: none !important;
+                    .fa{
+                        font-size: 44px !important;
+                    }
+                }
+                .b12-in{
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}

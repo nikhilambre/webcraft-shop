@@ -1,0 +1,47 @@
+@import "theme-light";
+@import "mixins";
+@import "var-blog-22";
+
+.sec-s26{
+    padding: 20px 0;
+
+    .s26-b1{
+        h3.head-text{
+            font-family: @header-ff;
+            color: @header-col-dark;
+            font-size: @header-size;
+
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid @bw-20;
+        }
+    }
+    .s26-b2{
+        .b2-ul{
+            .b2-li{
+                margin: 5px 0;
+                .b2-a{
+                    font-family: @text-ff;
+                    color: @text-col-dark-1;
+                    font-size: @text-size;
+
+                    min-width: 34px;
+                    text-align: center;
+                    padding: 7px 10px;
+                    display: inline-block;
+                    border: 1px solid @t;
+                    .bg(@bw-23);
+                    .tra(@tra-1);
+
+                    .svg-inline--fa{
+                        color: @c-1;
+                    }
+
+                    &:hover{
+                        border: 1px solid @c-1;
+                    }
+                }
+            }
+        }
+    }
+}

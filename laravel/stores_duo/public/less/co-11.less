@@ -1,0 +1,191 @@
+
+@import "mixins";
+@import "theme-light";
+
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'lato', sans-serif;
+@ff-3:  'Pacifico', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #f8d61b;
+@c-2:   #1bc4f5;
+@c-3:   #c90e31;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #1d1d1d;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 36px;
+@text-size: 14px;
+@text-size-mobile: 16px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 26px;
+@text-size-4: 32px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+@text-size-10: 40px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-27;
+@header-col-light-1: @bw-20;
+@header-col-light-2: @bw-20;
+@header-col-dark: @c-6;
+@header-col-dark-1: @bw-13;
+@header-col-dark-2: @bw-13;
+
+@text-col-light: @bw-27;
+@text-col-light-1: @bw-20;
+@text-col-light-2: @bw-20;
+@text-col-dark: @bw-4;
+@text-col-dark-1: @c-7;
+@text-col-dark-2: @c-7;
+
+@lead-text-col-light: @bw-27;
+@lead-text-col-light-1: @bw-20;
+@lead-text-col-light-2: @bw-20;
+@lead-text-col-dark: @bw-4;
+@lead-text-col-dark-1: @bw-13;
+@lead-text-col-dark-2: @bw-13;
+
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+
+.cont-11-wrap{
+    padding: 80px 0;
+
+    .form-section{
+        .section-head{
+            .head-text{
+                font-family: @header-ff;
+                color: @header-col-dark;
+                font-size: @header-size;
+            }
+            .p-text{
+                width: 60%;
+                margin-left: 20%;
+            }
+        }
+        .contact-form{
+            padding: 60px 0;
+
+            .input-group{
+                margin-bottom: 30px;
+                padding: 0 20px;
+                float: left;
+    
+                .form-control{
+                    border: 1px solid @bw-20;
+                    color: @c-1;
+                    box-shadow: none;
+                    .placeholder(@bw-20);
+                    .bg(@bw-30);
+
+                    padding: 12.5px 20px 12.5px 25px;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    border-radius: 6px;
+    
+                    &:focus{
+                        box-shadow: none;
+                        border-color: @c-1;
+                    }
+                }
+                .fa{
+                    display: block;
+                    width: 64px;
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    font-size: 14px;
+                    line-height: 52px;
+                    text-align: center;
+                    color: @bw-20;
+                    z-index: 1000;
+                }                        
+                .btn{
+                    margin: 0 auto;
+                    border-radius: 6px;
+                    color: @gb-27;
+                    .bg(@c-1);
+                    border: 2px solid @gb-30;
+                    .tra(@tra-1);
+                }
+            }
+
+            .text-section{
+                padding-bottom: 60px;
+        
+                .box{
+                    .lead-text{
+                        color: @lead-text-col-dark-1;
+                        font-family: @text-ff;
+                        font-size: @lead-text-size;
+        
+                        font-weight: bold;
+                        margin-bottom: 20px;
+                    }       
+                    .location{.bg(@c-1);}
+                    .phone{.bg(@c-2);}
+                    .mail{.bg(@c-3);}
+        
+                    .p-text{
+                        font-family: @text-ff;
+                        color: @text-col-dark-1;
+                        font-size: @text-size-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .p-text{
+        font-size: 16px !important;
+    }
+    .cont-11-wrap{}
+}

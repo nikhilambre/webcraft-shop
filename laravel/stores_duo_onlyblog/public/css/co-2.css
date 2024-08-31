@@ -1,0 +1,57 @@
+.cont-wrap-2 .cont-2 {
+  padding: 100px 0;
+}
+.cont-wrap-2 .cont-2 .cont2-head .head-text {
+  font-family: 'Lato', serif;
+  color: #181818;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.cont-wrap-2 .cont-2 .cont2-head .p-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #484848;
+  font-size: 16px;
+}
+.cont-wrap-2 .cont-2 .contact-form {
+  padding: 60px 0;
+}
+.cont-wrap-2 .cont-2 .contact-form .input-group {
+  border-top: 1px solid #484848;
+}
+.cont-wrap-2 .cont-2 .contact-form .input-group .label-text {
+  display: block;
+  z-index: 0;
+  position: relative;
+  top: 2em;
+  margin: 0;
+  font-size: 0.85em;
+  line-height: 1.764705882em;
+  opacity: 0;
+  -webkit-transition: top 0.5s ease, opacity 0.5s ease;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+.cont-wrap-2 .cont-2 .contact-form .input-group .form-control {
+  position: relative;
+  border: none;
+  border-radius: 0;
+  font-size: 1.6em;
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 20px;
+}
+.cont-wrap-2 .cont-2 .contact-form .input-group .btn {
+  border: 1px solid #202020;
+  background-color: #4bb7cc;
+  border-radius: 0;
+}
+.cont-wrap-2 .cont-2 .contact-form .input-group .btn:hover {
+  background-color: #4bb7cc;
+  color: #fafafa;
+  border-color: #4bb7cc;
+}
+.cont-wrap-2 .cont-2 .contact-form .floating-label-change.floating-label-update .label-text {
+  top: 0;
+  opacity: 1;
+}

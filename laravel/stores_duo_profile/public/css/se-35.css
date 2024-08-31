@@ -1,0 +1,21 @@
+.sec-s35 {
+  padding: 20px 0;
+}
+.sec-s35 .s35-bs .bs-img {
+  max-height: 160px;
+  overflow: hidden;
+}
+.sec-s35 .s35-bs .bs-img .img {
+  width: 100%;
+}
+.sec-s35 .s35-bs .bs-h3 a {
+  font-family: 'Lato', serif;
+  font-size: 18px;
+  color: #181818;
+}
+.sec-s35 .s35-bs .bs-h3 a small {
+  font-size: 14px;
+}
+.sec-s35 .s35-bs .bs-date {
+  font-size: 12px;
+}

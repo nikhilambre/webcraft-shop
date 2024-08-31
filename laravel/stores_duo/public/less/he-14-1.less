@@ -1,0 +1,265 @@
+@import "theme-light";
+@import "mixins";
+@import (less) "../css/screenslitslider.css";
+@import (less) "../css/screenslitsliderstyle.css";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Montserrat', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+@c-1:   #4BB7CC;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+@c-5:   #01A2A6;
+@c-6:   #082f4e;
+@c-7:   #011222;
+
+@c-8:   #8898aa;
+@c-9:   #6b7c93;
+@c-10:  #43575d;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-link-text-size: 14px;
+
+@header-block-text-size-1: 16px;
+@header-block-text-size-1-mobile: 14px;
+
+@header-block-text-size-2: 70px;
+@header-block-text-size-2-mobile: 55px;
+
+@header-block-text-size-3: 18px;
+@header-block-text-size-3-mobile: 14px;
+
+@header-block-link-text: 14px;
+
+@header-size: 36px;
+@text-size: 14px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+
+
+//  Location specific colors    ////////////////////////////
+@header-link-text-color: @bw-10; //top navbar link text
+@header-link-text-color-hover: @c-1;
+@header-link-text-color-2: @bw-10; //top navbar link text in case color change on slide
+@header-link-text-color-hover-2: @c-1;
+
+@header-link-bg-color: @bw-7; //top navbar link bg
+@header-link-bg-color-hover: @bw-7; //top navbar link bg
+
+@header-background-color: @w-4; //top navbar area color
+
+@header-block-color-1: @bw-27; //home page header block 1
+@header-block-color-2: @bw-27; //home page header block 2
+@header-block-color-3: @bw-27; //home page header block 3
+@header-block-link: @bw-27; //home page header block link
+@header-block-link-bg: @c-1; //home page header block link background
+
+
+//  Location specific fonts    ////////////////////////////
+@header-link-ff: @ff-1;
+@header-block-ff-1: @ff-1;
+@header-block-ff-2: @ff-2;
+@header-block-ff-3: @ff-1;
+
+
+.c14-header{
+    .navbar{
+        .bg(@header-background-color);
+        margin: 0;
+
+        .navbar-header{
+            .navbar-toggle{}
+            .navbar-brand{
+                height: auto;
+                padding: 0;
+                img{
+                    height: 90px;
+                }
+                .brand-img-w{
+                    display: none;
+                }
+                .brand-img-b{
+                    display: block;
+                }
+            }
+        }
+        .collapse{
+            .nav{
+                li{
+                    a{
+                        color: @header-link-text-color;
+                        font-family: @header-link-ff;
+                        font-size: @header-link-text-size;
+                        display: block;
+                        padding: 0 15px;
+                        line-height: 90px;
+                        text-transform: uppercase;
+                        .tra(@tra-2);
+
+                        &:hover{
+                            color: @header-link-text-color-hover;
+                        }
+                        .i{
+                            width: 34px;
+                            height: 34px;
+                            margin: -10px -10px 0 -10px;
+                            padding-top: 10px;
+                            color: @header-link-text-color;
+                            .bg(@c-1);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.carousel_body_n{
+    .sl-slider-wrapper{
+        width: 100%;
+        height: 550px;
+
+        .sl-slider{
+            .sl-slide{
+                .sl-slide-inner{
+                }
+            }
+
+            .bg-img{ 
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            h2{
+                color: @header-block-color-2;
+                font-family: @header-block-ff-2;
+                font-size: @header-block-text-size-2;
+
+                text-shadow: 2px 2px 4px #000;
+                margin-left: 10%;
+            }
+            blockquote{
+                .bg(@t);
+                border: none;
+
+                p{
+                    width: 50%;
+                    color: @header-block-color-1;
+                    font-family: @header-block-ff-1;
+                    font-size: @header-block-text-size-1;
+                }
+                cite{
+                    color: @header-block-color-3;
+                    font-family: @header-block-ff-3;
+                    font-size: @header-block-text-size-3;
+                }
+            }
+            .img-cover{
+                position: absolute;
+                right: 0;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                background: -webkit-radial-gradient(50% 55%, ellipse closest-corner, rgba(0, 0, 0, 0.3) 1%, rgba(0, 0, 0, 0.8) 100%);
+                background: -moz-radial-gradient(50% 55%, ellipse closest-corner, rgba(0, 0, 0, 0.3) 1%, rgba(0, 0, 0, 0.8) 100%);
+                background: -ms-radial-gradient(50% 55%, ellipse closest-corner, rgba(0, 0, 0, 0.3) 1%, rgba(0, 0, 0, 0.8) 100%);
+                background: radial-gradient(50% 55%, ellipse closest-corner, rgba(0, 0, 0, 0.3) 1%, rgba(0, 0, 0, 0.8) 100%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .row {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        overflow: hidden;
+    }
+    .c14-header .navbar{
+        .navbar-toggle{
+            margin-top: 22px;
+            margin-right: 20px;
+        }
+        .navbar-collapse{
+            .bg(@bw-30);
+            max-height: none;
+            ul li a{
+                line-height:50px !important;
+                color: @bw-10 !important;
+                padding: 0 !important;
+                text-align: center;
+            }
+        }
+        .navbar-brand{
+            padding: 0 0 0 20px !important;
+            img{
+                width: 120px !important;
+            }
+        }
+    }
+    .carousel_body_n{
+        .sl-slider{
+            .sl-slide{
+                .sl-slide-inner{
+                }
+            }
+
+            .bg-img{ 
+                img{
+                    width: auto !important;
+                    height: 700px;
+                }
+            }
+            h2{
+                padding: 70px 15px 10px !important;
+                font-size: @header-block-text-size-2-mobile !important;
+            }
+            blockquote{
+                padding: 10px !important;
+                p{
+                    width: 100% !important;
+                    font-size: @header-block-text-size-1;
+                }
+                cite{
+                    font-size: @header-block-text-size-3-mobile;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,190 @@
+@import "theme-light";
+@import "mixins";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Open Sans Condensed', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #92CAE6;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 30px;
+@text-size: 14px;
+@text-size-mobile: 16px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 32px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+@text-size-10: 40px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-4;
+@header-col-dark-1: @bw-10;
+@header-col-dark-2: @bw-17;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-4;
+@text-col-dark-1: @bw-10;
+@text-col-dark-2: @bw-17;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-4;
+@lead-text-col-dark-1: @bw-10;
+@lead-text-col-dark-2: @bw-17;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+//  Footer related variables
+@footer-bg-1: @bw-1;
+@footer-bg-2: @bw-4;
+@footer-bg-3: @bw-3;
+
+
+.fot-s6{
+    .foot-top{
+        padding: 60px 0;
+        .bg(@footer-bg-2);
+    }
+    .s6-b1{}
+    .b1-c1{
+        border-bottom: 1px solid @bw-14;
+        .c1-ul{
+            margin-bottom: 15px;
+            .c1-li{
+                margin-right: 10px;
+                a{
+                    font-family: @text-ff;
+                    color: @text-col-dark-2;
+                    font-size: @text-size;
+
+                    font-weight: bold;
+                    .tra(@tra-1);
+
+                    &:hover{
+                        color: @text-col-dark-1;
+                    }
+                }
+            }
+        }
+    }
+    .b1-c2{
+        margin-top: 15px;
+        .fa{
+            display: inline-block;
+            width: 30px;
+        }
+        .c2-p{
+            display: inline-block;
+            margin-right: 20px;
+
+            font-family: @text-ff;
+            color: @text-col-dark-1;
+            font-size: @text-size;
+        }
+    }
+    .s6-b2{
+        .b2-p{
+            padding-bottom: 13px;
+            font-weight: bold;
+            border-bottom: 1px solid @bw-14;
+
+            font-family: @text-ff;
+            color: @text-col-dark-2;
+            font-size: @text-size;
+        }
+        .b2-ul{
+            .b2-li{
+                a{
+                    padding-right: 5px;
+                    i{
+                        color: @bw-12;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .foot-line{
+        padding: 20px 0;
+        .bg(@bw-2);
+        .fl-p{
+            color: @bw-16;
+            display: inline;
+            a{
+                font-family: @text-ff;
+                color: @text-col-dark-1;
+                font-size: @text-size;
+
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .p-text{
+        font-size: 16px !important;
+    }
+    .fot-s6{
+        p{
+            font-size: 16px !important;
+        }
+    }
+}

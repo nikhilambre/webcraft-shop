@@ -1,0 +1,51 @@
+-Home
+    -what we do->explain, link to products page
+    -dashboard explain, link to Explain all 4 dashboard vesions
+    -demo links section
+-Features
+    -Templates[good looking templates can bring more customers]
+        -goes to same link as from product ->Product Showcase templates[highlight on images]
+        -goes to same link as from product ->Ecommerce templates[highlight on images]
+        -goes to same link as from product ->blog templates[highlight on images]
+        -goes to same link as from product ->personal templates (contact us/book slot)
+        -goes to same link as from product ->static templates (contact us/book slot)
+        -goes to same link as from product ->custom templates (contact us/book slot)
+        -how to select templates- explaination or how you will get site
+        ~Choose your components on your own
+        ~cards of demo and link to demo domain
+    -Dashboard
+        -Explain all 4 dashboard vesions(e-commerce, product, blog, personal) and link to demo domains
+        ~give details of dashboard (Pricing/Tags/Home/Messages/Orders show these Svreen shots and explain)
+    -CMS[easy update of content]
+    ~block~other features[chat,hosting,seo,google analytics]
+-Feature Details (Explain all points in deail, a page may be without image)
+-Work flow(template choose to site build complete idea)
+-Product
+    ~How our product support small business
+    ~Ecommerce with dashboard and link to demo template - section from pricing showing pricing details- what template support details
+    ~product with dashboard and link to demo template
+    ~blog with dashboard and link to demo template
+    ~static and link to demo template
+    ~personal sites(personal portfolio, photographer, dietrician, etc.) and link to demo template
+    ~custom websites
+-Pricing
+    ~block~how small investment can help you grow
+    ~and a tag line
+    ~block~cards of things you getting 
+        >Premium Hosting + Email with 1GB Space
+        >MVC Pattern based websites + Dashboard
+        >SEO friendly + Validated HTML Code + Google analytics
+        >On Page CMS + Chat Feature
+        >100s of Products, Blogs upload
+        >Mobile Ready Responsive Design
+
+    ~block~pricing tables with get details link
+        -Show calculation how this cheaper user save ivestment in developer + hosting , pricing with all details (things with exact what quantity you will get)
+    ~block~watch while site in contruction
+-Showcase of demos, links to demo sites and demo dashboards
+-Our work[listing of work items]
+-Contact
+-About us
+-Privacy
+-Terms
+-Refund

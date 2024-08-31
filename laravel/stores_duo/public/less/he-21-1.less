@@ -1,0 +1,116 @@
+@import "theme-light";
+@import "mixins";
+@import "var-blog-23";
+
+.he-21-top{
+    height: 60px;
+    .bg(@header-background-color);
+
+    .top-l{
+        ul{
+            li{
+                a{
+                    color: @header-link-text-color;
+                    font-size: @header-link-text-size;
+                    line-height: 60px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    padding: 10px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .top-r{
+        ul{
+            li{
+                font-size: @header-link-text-size;
+                line-height: 60px;
+                padding-left: 15px;
+                a{
+                    color: @header-link-text-color;
+                    font-size: @header-link-text-size;
+                    text-transform: uppercase;
+
+                    i{
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+.he-21-mid{
+    h1{
+        padding: 20px;
+        font-family: @header-block-text-size-1;
+        font-weight: 700;
+
+        small{
+            font-size: 0.8em;
+        }
+    }
+}
+
+.he-21-header{
+    .navbar{
+        .bg(@t);
+        border: none;
+
+        .collapse{
+            border-top: 1px solid @bw-14;
+            border-bottom: 1px solid @bw-14;
+        }
+
+        .nav{
+            padding: 12px;
+            display: inline-block;
+            float: none;
+
+            li{
+                padding: 0 20px;
+                a{
+                    text-transform: uppercase;
+                    color: @header-link-text-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+
+    .top-l{
+        display: none;
+    }
+    .top-r{
+        float: none !important;
+
+        ul{
+            text-align: center;
+        }
+    }
+    .he-21-header{
+        .navbar-toggle{
+            color: @bw-5;
+            float: none;
+            display: block;
+            font-size: 16px;
+            padding: 15px 10px;
+        }
+    }
+
+}

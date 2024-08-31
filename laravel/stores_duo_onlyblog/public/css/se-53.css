@@ -1,0 +1,40 @@
+.sec-s53 {
+  padding: 20px 0;
+}
+.sec-s53 .s53-head {
+  padding: 0;
+}
+.sec-s53 .s53-head h3.head-text {
+  font-size: 20px;
+  font-family: 'Lato', serif;
+  padding-bottom: 8px;
+  position: relative;
+  margin: 0 0 30px;
+  font-weight: 700;
+}
+.sec-s53 .s53-head h3.head-text:before {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background: #34495e;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.sec-s53 .comment-box {
+  padding-bottom: 20px;
+}
+.sec-s53 .comment-box textarea {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #d0d0d0;
+}
+.sec-s53 .comment-btn {
+  display: inline;
+  margin-right: 10px;
+}
+.sec-s53 .comment-btn .save-comm {
+  border-radius: 0;
+  background-color: #4bb7cc;
+  color: #ffffff;
+}

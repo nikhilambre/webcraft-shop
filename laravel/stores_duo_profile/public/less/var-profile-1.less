@@ -1,0 +1,130 @@
+@import "theme-light";
+@import "mixins";
+
+
+//  Font family definations
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Raleway', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations
+@c-1:   #4BB7CC;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+@c-5:   #01A2A6;
+@c-6:   #082f4e;
+@c-7:   #011222;
+
+@c-8:   #8898aa;
+@c-9:   #6b7c93;
+@c-10:  #43575d;
+
+
+//  Theme color transparent shades
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+//  Header Variables
+///////////////////////////////////////////////////////////////////////////////
+
+
+//  Font size as per text location
+@header-link-text-size: 14px;
+
+@header-block-text-size-1: 16px;
+@header-block-text-size-2: 100px;
+@header-block-text-size-3: 18px;
+@header-block-link-text: 14px;
+
+
+//  Location specific colors
+@header-link-text-color: @bw-14; //top navbar link text
+@header-link-text-color-hover: @c-1;
+@header-link-text-color-2: @bw-13; //top navbar link text in case color change on slide
+@header-link-text-color-hover-2: @c-1;
+
+@header-link-bg-color: @bw-7; //top navbar link bg
+@header-link-bg-color-hover: @bw-7; //top navbar link bg
+
+@header-background-color: @w-4; //top navbar area color
+
+@header-block-color-1: @bw-27; //home page header block 1
+@header-block-color-2: @bw-27; //home page header block 2
+@header-block-color-3: @bw-27; //home page header block 3
+@header-block-link: @bw-27; //home page header block link
+@header-block-link-bg: @c-1; //home page header block link background
+
+
+//  Location specific fonts
+@header-link-ff: @ff-1;
+@header-block-ff-1: @ff-1;
+@header-block-ff-2: @ff-2;
+@header-block-ff-3: @ff-1;
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+//  Component Variables
+///////////////////////////////////////////////////////////////////////////////
+
+//  Font size as per text location
+@header-size: 36px;
+@text-size: 15px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 30px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+
+//  Component specific colors
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-4;
+@header-col-dark-1: @bw-10;
+@header-col-dark-2: @bw-17;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-4;
+@text-col-dark-1: @bw-10;
+@text-col-dark-2: @bw-17;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-4;
+@lead-text-col-dark-1: @bw-10;
+@lead-text-col-dark-2: @bw-17;
+
+//  Component specific fonts
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+//  Footer Variables
+///////////////////////////////////////////////////////////////////////////////
+
+//  Footer related variables
+@footer-bg-1: @bw-1;
+@footer-bg-2: @bw-4;
+@footer-bg-3: @bw-30;

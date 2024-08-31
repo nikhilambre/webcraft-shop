@@ -1,0 +1,92 @@
+@import "mixins";
+@import "theme-light";
+@import "var-profile-1";
+
+
+.cont-11-wrap{
+    .form-section{
+        padding: 80px 0;
+        .section-head{
+            .head-text{
+                font-family: @header-ff;
+                color: @header-col-dark;
+                font-size: @header-size;
+            }
+            .p-text{
+                width: 60%;
+                margin-left: 20%;
+            }
+        }
+        .contact-form{
+            padding: 20px 0;
+
+            .input-group{
+                margin-bottom: 30px;
+                padding: 0 20px;
+                float: left;
+    
+                .form-control{
+                    border: 1px solid @bw-20;
+                    color: @c-1;
+                    box-shadow: none;
+                    .placeholder(@bw-20);
+                    .bg(@bw-30);
+
+                    padding: 12.5px 20px 12.5px 25px;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    border-radius: 6px;
+    
+                    &:focus{
+                        box-shadow: none;
+                        border-color: @c-1;
+                    }
+                }
+                .fa{
+                    display: block;
+                    width: 64px;
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    font-size: 14px;
+                    line-height: 52px;
+                    text-align: center;
+                    color: @bw-20;
+                    z-index: 1000;
+                }                        
+                .btn{
+                    margin: 0 auto;
+                    border-radius: 6px;
+                    color: @gb-27;
+                    .bg(@c-1);
+                    border: 2px solid @gb-30;
+                    .tra(@tra-1);
+                }
+            }
+
+            .text-section{
+                padding-bottom: 60px;
+        
+                .box{
+                    .lead-text{
+                        color: @lead-text-col-dark-1;
+                        font-family: @text-ff;
+                        font-size: @lead-text-size;
+        
+                        font-weight: bold;
+                        margin-bottom: 20px;
+                    }       
+                    .location{.bg(@c-1);}
+                    .phone{.bg(@c-2);}
+                    .mail{.bg(@c-3);}
+        
+                    .p-text{
+                        font-family: @text-ff;
+                        color: @text-col-dark-1;
+                        font-size: @text-size-1;
+                    }
+                }
+            }
+        }
+    }
+}

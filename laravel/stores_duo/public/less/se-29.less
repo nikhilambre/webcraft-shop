@@ -1,0 +1,212 @@
+@import "theme-light";
+@import "mixins";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Roboto', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #92CAE6;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #f4f5f9;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 36px;
+@text-size: 14px;
+@text-size-mobile: 16px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 24px;
+@text-size-4: 32px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+@text-size-10: 40px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-2;
+@header-col-dark-1: @bw-8;
+@header-col-dark-2: @bw-12;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-2;
+@text-col-dark-1: @bw-8;
+@text-col-dark-2: @bw-15;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-2;
+@lead-text-col-dark-1: @bw-8;
+@lead-text-col-dark-2: @bw-15;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+
+.b29-wrap{
+    .bg(@bw-25);
+    padding: 60px 0;
+
+    .head-text{
+        font-family: @header-ff;
+        color: @header-col-dark;
+        font-size: @header-size;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .b29-carousel{
+        position: relative;
+
+        .carousel-inner{
+            padding-bottom: 80px;
+
+            .item{
+                img{
+                    width: 100px;
+
+                }
+                .lead-text{
+                    color: @lead-text-col-dark-1;
+                    font-family: @ff-2;
+                    font-size: 24px;
+
+                    text-shadow: 1px 1px 2px #fff;
+
+                    .fa{
+                        color: @c-1;
+                    }
+                }
+                .separator{
+                    margin: 15px auto 5px;
+                    position: relative;
+                    height: 1px;
+
+                    &::after{
+                        height: 1px;
+                        background: #e8e8e8;
+                        background: -moz-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.09) 70%, transparent 100%);
+                        background: -webkit-gradient(linear, left top, right top, color-stop(0%, transparent), color-stop(35%, rgba(0, 0, 0, 0.09)), color-stop(70%, rgba(0, 0, 0, 0.09)), color-stop(100%, transparent));
+                        background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.09) 70%, transparent 100%);
+                        background: -o-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.09) 70%, transparent 100%);
+                        background: -ms-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.09) 70%, transparent 100%);
+                        background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.09) 70%, transparent 100%);
+                        position: absolute;
+                        bottom: -1px;
+                        content: "";
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+                .p-text.testimonil{
+                    font-family: @text-ff;
+                    color: @bw-14;
+                    font-size: @text-size;
+
+                    width: 70%;
+                    position: relative;
+                    margin: 20px 0 20px 15%;
+
+                    &::after{
+                        content: "“";
+                        width: 25px;
+                        height: 25px;
+                        line-height: 36px;
+                        font-size: 36px;
+                        font-family: "PT Serif", serif;
+                        position: absolute;
+                        top: -5px;
+                        left: -25px;
+                        color: #cdcdcd;
+                    }
+
+                    .fa{
+                        width: 30px;
+                        display: inline-block;
+                    }
+                }
+                .p-text.by-name{
+                    font-family: @text-ff;
+                    color: @bw-14;
+                    font-size: @text-size;
+                }
+                .p-text.by-company{
+                    font-family: @text-ff;
+                    color: @bw-14;
+                    font-size: @text-size;
+                }
+            }
+        }
+
+        .carousel-indicators{
+            li{
+                background: rgba(150,150,150,0.1);
+                margin: 6px;
+                -webkit-transition: all 0.2s;
+                -moz-transition: all 0.2s;
+                -ms-transition: all 0.2s;
+                -o-transition: all 0.2s;
+                transition: all 0.2s;
+                box-shadow: 0 1px 1px rgba(255,255,255,0.7), inset 0 1px 1px rgba(0,0,0,0.4), 0 0 0 2px rgba(255,255,255,0.9);
+            }
+            li.active{
+                box-shadow: 0 2px 2px rgba(255,255,255,0.7), inset 0 1px 1px rgba(0,0,0,0.4), 0 0 0 7px rgba(255,255,255,0.9); 
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .p-text{
+        font-size: 16px !important;
+    }
+    .b29-wrap{}
+}

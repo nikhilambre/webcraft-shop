@@ -1,0 +1,257 @@
+@import "theme-light";
+@import "mixins";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Varela Round', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #0baf4e;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 30px;
+@text-size: 14px;
+@text-size-mobile: 16px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 26px;
+@text-size-4: 32px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+@text-size-10: 40px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-2;
+@header-col-dark-1: @bw-8;
+@header-col-dark-2: @bw-12;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-2;
+@text-col-dark-1: @bw-8;
+@text-col-dark-2: @bw-15;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-2;
+@lead-text-col-dark-1: @bw-8;
+@lead-text-col-dark-2: @bw-15;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+
+.sec-s60{
+    padding: 80px 0;
+
+    .section-head{
+        .head-h2{
+            font-family: @header-ff;
+            color: @header-col-dark;
+            font-size: @lead-text-size;
+    
+            padding-bottom: 8px;
+            position: relative;
+            margin: 0 0 30px;
+            font-weight: 700;
+    
+            &:before{
+                content: "";
+                width: 100px;
+                height: 2px;
+                background: @c-2;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+    .wishlist{
+        .prod-layout{
+            margin-bottom: 80px;
+
+            .item-container{
+
+                &:hover > .item-words .item-btn{
+                    display: block;
+                    z-index: 10000;
+                }
+            }
+        }
+        .item-img{
+            margin-bottom: 20px;
+            height: 260px;
+            overflow: hidden;
+
+            img{
+                margin: 0 auto;
+                max-width: 100%;
+                display: block;
+            }
+        }
+        .item-tag{
+            left: 10px;
+            top: 15px;
+            color: #fff;
+            height: 20px;
+            line-height: 18px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 11px;
+            display: inline-block;
+            margin: 0;
+            padding: 1px 5px;
+            margin-left: 15px;
+            position: absolute;
+            .bg(@l-2);
+        }
+        .item-words{
+            h4{
+                font-size: 16px;
+                margin-top: 5px;
+                height: 2.8em;
+                overflow: hidden;
+                display: inline-block;
+                width: 100%;
+
+                a{
+                    margin: 0;
+                    font-family: @ff-2;
+                    font-weight: 700;
+                    color: #666;
+                }
+            }
+
+            .item-rat{
+                margin: 5px 0 0 0;
+
+                span{
+                    font-size: 11px;
+                    color: @c-3;
+                }
+            }
+
+            .item-price{
+
+                .pri-new{
+                    font-size: 18px;
+                    font-weight: normal;
+                    color: @c-1;
+                }
+                .pri-old{
+                    font-size: 12px;
+                    line-height: 20px;
+                    padding: 2px 5px;
+                    display: inline-block;
+                    text-decoration: line-through;
+                    color: #999;
+                }
+            }
+
+            .item-desc{
+                font-family: @text-ff;
+                font-size: @text-size;
+                color: @text-col-dark-1;
+            }
+
+            .item-btn{
+                display: none;
+                position: absolute;
+                top: 200px;
+                left: 20%;
+                margin: 5px auto;
+
+                .btn-1{
+                    vertical-align: top;
+                    .bg(@c-1);
+                    color: #fff;
+                    font-size: 16px;
+                    padding: 0 15px;
+                    height: 38px;
+                    margin: 0 4px;
+                    border-radius: 3px;
+                    z-index: 2;
+                    top: 0;
+                    white-space: nowrap;
+                    border: 1px solid #ccc;
+
+                    .fa{
+                        width: 30px;
+                    }
+
+                    &:hover{
+                        background: @c-1;
+                        border-color: #fff;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .p-text{
+        font-size: 16px !important;
+    }
+    .sec-s60{
+        .wishlist{
+            .prod-layout{
+                padding: 5px !important;
+                margin-bottom: 50px !important;
+            }
+            .item-img{
+                height: 200px !important;
+            }
+        }
+    }
+}

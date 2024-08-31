@@ -1,0 +1,201 @@
+
+@import "mixins";
+@import "theme-light";
+
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Poppins', sans-serif;
+@ff-3:  'Pacifico', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #f26522;
+@c-2:   #34495E;
+@c-3:   #2196f3;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #1d1d1d;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 30px;
+@text-size: 14px;
+@text-size-mobile: 16px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 26px;
+@text-size-4: 32px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+@text-size-10: 40px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-30;
+@header-col-light-1: @bw-22;
+@header-col-light-2: @bw-18;
+@header-col-dark: @bw-2;
+@header-col-dark-1: @bw-8;
+@header-col-dark-2: @bw-15;
+
+@text-col-light: @bw-30;
+@text-col-light-1: @bw-22;
+@text-col-light-2: @bw-18;
+@text-col-dark: @bw-2;
+@text-col-dark-1: @bw-8;
+@text-col-dark-2: @bw-15;
+
+@lead-text-col-light: @bw-30;
+@lead-text-col-light-1: @bw-22;
+@lead-text-col-light-2: @bw-18;
+@lead-text-col-dark: @bw-2;
+@lead-text-col-dark-1: @bw-8;
+@lead-text-col-dark-2: @bw-15;
+
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+
+.cont-7-wrap{
+    padding: 80px 0;
+    .bg(@bw-30);
+
+    .form-section{
+        padding: 60px 0;
+
+        .section-head{
+            .head-text{
+                font-family: @header-ff;
+                color: @header-col-dark;
+                font-size: @header-size;
+
+                small{
+                    font-family: @ff-3;
+                    line-height: 3em;
+                }
+            }
+            .p-text{
+                font-family: @text-ff;
+                color: @text-col-dark-1;
+                font-size: @text-size;
+
+                width: 60%;
+                margin: 0 auto;
+            }
+            .bottom-span{
+                display: inline-block;
+                font-size: 20px;
+                position: relative;
+                margin: 20px 0;
+                color: @c-1;
+
+                &:after{
+                    position: absolute;
+                    right: 100%;
+                    content: "";
+                    top: 50%;
+                    width: 100px;
+                    height: 2px;
+                    background-color: @c-1;
+                }
+                &:before{
+                    position: absolute;
+                    left: 100%;
+                    content: "";
+                    top: 50%;
+                    width: 100px;
+                    height: 2px;
+                    background-color: @c-1;
+                }
+            }
+        }
+        .contact-form{
+            margin: 60px 0;
+            .input-group{
+                margin-bottom: 20px;
+                padding: 0 20px;
+                float: left;
+    
+                .form-control{
+                    padding-left: 54px;
+                    border-radius: 0;
+                    border: 1px solid @bw-20;
+                    color: @c-1;
+                    box-shadow: none;
+                    .placeholder(@bw-20);
+                    .bg(@bw-30);
+    
+                    &:focus{
+                        box-shadow: none;
+                    }
+                }
+                i{
+                    display: block;
+                    width: 64px;
+                    position: absolute;
+                    top: -2px;
+                    left: 15px;
+                    font-size: 20px;
+                    line-height: 52px;
+                    text-align: center;
+                    color: @bw-18;
+                    z-index: 1000;
+                }
+                .btn{
+                    margin: 0 auto;
+                    border-radius: 3px;
+                    color: @gb-27;
+                    .bg(@c-1);
+                    border: 2px solid @gb-30;
+                    .tra(@tra-1);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .p-text{
+        font-size: 16px !important;
+    }
+    .cont-7-wrap{}
+}

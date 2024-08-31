@@ -1,0 +1,101 @@
+@import "theme-light";
+@import "mixins";
+@import "var-blog-22";
+
+
+.sec-s59{
+    padding: 40px 0;
+
+    .profile-left{
+        padding-right: 30px;
+    }
+    .profile-img{
+        img{
+            width: 100%;
+        }
+        p{
+            margin: 10px 0;
+        }
+        a{
+            .bg(@c-1);
+            color: @gb-30;
+            border: none;
+        }
+    }
+    .profile-right{
+        padding-left: 30px;
+        border-left: 1px solid @bw-22;
+    }
+    .profile-name{
+        h2{
+            font-family: @header-ff;
+            color: @header-col-dark;
+            font-size: @header-size;
+
+            padding-bottom: 10px;
+            border-bottom: 2px solid @c-1;
+        }
+    }
+    .profile-info{
+        h3{
+            color: @lead-text-col-dark-1;
+            font-family: @header-ff;
+            font-size: @lead-text-size;
+
+            margin-bottom: 20px;
+        }
+        .dl-horizontal{
+            font-family: @text-ff;
+            color: @text-col-dark-1;
+            font-size: @text-size;
+
+            dt{
+                margin-bottom: 5px;
+            }
+            dd{
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .profile-order{
+        h3.order-head{
+            font-family: @header-ff;
+            color: @header-col-dark;
+            font-size: @header-size;
+
+            padding-bottom: 10px;
+            border-bottom: 2px solid @c-1;
+        }
+        .order-data{
+            margin-top: 40px;
+            h3{
+                font-family: @text-ff;
+                color: @text-col-dark-1;
+                font-size: @text-size;
+
+                font-weight: bold;
+            }
+            p{}
+        }
+        .cart-data{
+
+        }
+        .cart-product{
+            margin-bottom: 20px;
+            margin-left: 60px;
+            border-bottom: 1px solid @bw-22;
+            .cart-img{
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            .cart-details{
+                h3{}
+                p{
+                    span{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+@import "theme-light";
+@import "mixins";
+
+//  Font family definations    ////////////////////////////
+@ff-1:  'Open Sans', sans-serif;
+@ff-2:  'Bree Serif', serif;
+@ff-3:  'Open Sans', sans-serif;
+
+//  Color definations    ////////////////////////////
+//  Theme Color
+@c-1:   #4AD9D9;
+@c-2:   #34495E;
+@c-3:   #4AD9D9;
+@c-4:   #e9f0f2;
+
+//  Text Color
+@c-5:   #26304d;
+@c-6:   #38454e;    // light blue added
+@c-7:   #7d8a93;    // light text color
+@c-8:   #c0c5cc;    // 
+
+//  Background colors
+@c-9:   #8898aa;
+@c-10:  #6b7c93;
+@c-11:  #43575d;
+@c-12:  #6b7c93;
+@c-13:  #f5faff;
+
+
+//  Theme color transparent shades    ////////////////////////////
+@ct-1:  fade(@c-1, 30%);
+@ct-2:  fade(@c-1, 50%);
+@ct-3:  fade(@c-1, 70%);
+@ct-4:  fade(@c-1, 90%);
+
+@cl:    lighten(@c-1, 20%);
+@cd:    darken(@c-1, 20%);
+
+
+//  Font size as per text location    ////////////////////////////
+@header-size: 40px;
+@text-size: 14px;
+@text-size-mobile: 16px;
+@lead-text-size: 20px;
+@text-size-1: 16px;
+@text-size-2: 18px;
+@text-size-3: 26px;
+@text-size-4: 32px;
+@text-size-5: 60px;
+
+@text-size-6: 12px;
+@text-size-7: 10px;
+@text-size-8: 70px;
+@text-size-9: 90px;
+@text-size-10: 40px;
+
+//  Component specific colors    ////////////////////////////
+@header-col-light: @bw-27;
+@header-col-light-1: @bw-20;
+@header-col-light-2: @bw-20;
+@header-col-dark: @c-6;
+@header-col-dark-1: @bw-13;
+@header-col-dark-2: @bw-13;
+
+@text-col-light: @bw-27;
+@text-col-light-1: @bw-20;
+@text-col-light-2: @bw-20;
+@text-col-dark: @bw-4;
+@text-col-dark-1: @c-7;
+@text-col-dark-2: @c-7;
+
+@lead-text-col-light: @bw-27;
+@lead-text-col-light-1: @bw-20;
+@lead-text-col-light-2: @bw-20;
+@lead-text-col-dark: @bw-4;
+@lead-text-col-dark-1: @bw-13;
+@lead-text-col-dark-2: @bw-13;
+
+//  Component specific fonts    ////////////////////////////
+@header-ff: @ff-2;
+@text-ff: @ff-1;
+@text-ff-1: @ff-3;
+
+.phe-s1{
+    min-height: 350px;
+    position: relative;
+    background-color: @c-1;
+    z-index: 1;
+
+    .inner-banner-content{
+        padding: 100px 0;
+
+        .head-text{
+            font-family: @header-ff;
+            color: @header-col-light;
+            font-size: @header-size;
+
+            margin: 15px 0;
+        }
+        .breadcumbs{
+            li, li a{
+                font-family: @text-ff;
+                color: @text-col-light;
+                font-size: @text-size;
+            }
+            li:not(:first-child):before {
+                content: "-";
+                padding: 0 7px 0 5px;
+            }
+        }
+        .title-line.span-after-1{
+            clear: both;
+            position: relative;
+            line-height: 0;
+        
+            .short-line{
+                background-color: #fff;
+                border-radius: 10px;
+                display: inline-block;
+                height: 3px;
+                margin-right: 5px;
+                position: relative;
+                width: 20px;
+            }
+            .long-line{
+                background-color: #fff;
+                border-radius: 10px;
+                display: inline-block;
+                height: 3px;
+                position: relative;
+                width: 90px;
+            }
+        }
+    }
+    .banner-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: right center;
+        z-index: -1;
+        opacity: .1;
+    }
+}
+
+@media screen and (min-width: 1200px){ //lg size devices
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) { //md size devices
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) { //sm size devices
+}
+
+@media screen and (max-width: 767px) { //xs size devices
+    .p-text{
+        font-size: 16px !important;
+    }
+    .phe-s1{}
+}

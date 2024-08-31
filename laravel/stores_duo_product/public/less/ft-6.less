@@ -1,0 +1,90 @@
+@import "theme-light";
+@import "mixins";
+@import "var-product-1";
+
+.fot-s6{
+    .foot-top{
+        padding: 60px 0;
+        .bg(@footer-bg-2);
+    }
+    .s6-b1{}
+    .b1-c1{
+        border-bottom: 1px solid @bw-14;
+        .c1-ul{
+            margin-bottom: 15px;
+            .c1-li{
+                margin-right: 10px;
+                a{
+                    font-family: @text-ff;
+                    color: @text-col-dark-2;
+                    font-size: @text-size;
+
+                    font-weight: bold;
+                    .tra(@tra-1);
+
+                    &:hover{
+                        color: @text-col-dark-1;
+                    }
+                }
+            }
+        }
+    }
+    .b1-c2{
+        margin-top: 15px;
+        .fa{
+            display: inline-block;
+            width: 24px;
+            color: @bw-12;
+        }
+        .c2-p{
+            display: inline-block;
+            margin-right: 20px;
+
+            font-family: @text-ff;
+            color: @text-col-dark-2;
+            font-size: @text-size;
+        }
+    }
+    .s6-b2{
+        .b2-p{
+            padding-bottom: 13px;
+            font-weight: bold;
+            border-bottom: 1px solid @bw-14;
+
+            font-family: @text-ff;
+            color: @text-col-dark-2;
+            font-size: @text-size;
+        }
+        .b2-ul{
+            .b2-li{
+                a{
+                    padding-right: 5px;
+                    i{
+                        display: inline-block;
+                        color: @bw-20;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .foot-line{
+        padding: 20px 0;
+        .bg(@bw-2);
+        .fl-p{
+            color: @bw-16;
+            display: inline;
+            a{
+                font-family: @text-ff;
+                color: @text-col-dark-1;
+                font-size: @text-size;
+                padding: 0 10px;
+
+                strong{
+                    color: @c-1;
+                }
+            }
+        }
+    }
+}

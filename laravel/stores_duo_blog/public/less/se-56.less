@@ -1,0 +1,114 @@
+@import "theme-light";
+@import "mixins";
+@import "var-blog-22";
+
+.sec-s56{
+    padding: 60px 0 100px 0;
+    position: relative;
+
+    .s56-head{
+        margin-bottom: 60px;
+        .head-text{
+            font-family: @header-ff;
+            color: @header-col-dark;
+            font-size: @header-size;
+        }
+    }
+
+    .sign-part{
+        position: absolute;
+        left: 50%;
+        top: 100%;
+
+        &::before{
+            bottom: 30px;
+            left: 10px;
+            content: " ";
+            position: absolute;
+            display: inline-block;
+            width: 1px;
+            height: 100px;
+            .bg(@bw-10);
+        }
+
+        &::after{
+            top: 30px;
+            left: 10px;
+            content: " ";
+            position: absolute;
+            display: inline-block;
+            width: 1px;
+            height: 160px;
+            .bg(@bw-10);
+        }
+    }
+    .login{
+        padding: 20px 40px 20px 20px;
+
+        .input-col{
+            position: relative;
+            margin-bottom: 20px;
+
+            .form-control{
+                padding-left: 45px;
+
+                &:focus{
+                    border-color: @bw-10;
+                    box-shadow: none;
+                }
+            }
+            .svg-inline--fa{
+                position: absolute;
+                top: 14px;
+                left: 30px;
+                color: @c-1;
+                font-size: 1.2em;
+            }
+            .btn{
+                .bg(@c-1);
+                color: @gb-30;
+            }
+        }
+    }
+    .social{
+        padding: 20px 20px 20px 60px;
+
+        a{
+            font-size: 1.2em;
+            display: block;
+            padding: 13px 5px;
+            color: @c-2;
+            .bg(@bw-24);
+            border-radius: 6px;
+            margin-bottom: 22px;
+
+            &:hover{
+                color: @c-1;
+            }
+
+            .fa-facebook{
+                color: #3b5998;
+            }
+            .fa-twitter{
+                color: #55acee;
+            }
+            .fa-google-plus-g{
+                color: #dd4b39;
+            }
+        }
+
+        .svg-inline--fa{
+            font-size: 1.4em;
+            text-align: center;
+            color: @c-1;
+            display: inline-block;
+            width: 54px;                            
+            vertical-align: middle;
+        }
+    }
+}
+
+.login-footer p{
+    padding-top: 40px;
+    margin-bottom: 80px;
+}
